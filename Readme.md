@@ -68,9 +68,6 @@ Someone that has not been registered yet can still use the resources if a regist
 * Mongoose - version 5.9.22
 * Multer - version 1.4.2
 
-## 
-Follow this [link](http://didash20.github.io/DIY-Adulting/) to view the home page
-
 ## Status
 Project is: _Under Development_
 
