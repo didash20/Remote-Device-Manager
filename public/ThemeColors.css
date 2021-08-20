@@ -1,0 +1,578 @@
+:root {
+    /*Breaked up HSL components of every theme color*/
+    
+    --Dark-1-hue: 216;
+    --Dark-1-sat: 69%;
+    --Dark-1-light: 29%;
+    
+    --Light-1-hue: 0;
+    --Light-1-sat: 0%;
+    --Light-1-light: 100%;
+    
+    --Dark-2-hue: 243;
+    --Dark-2-sat: 27%;
+    --Dark-2-light: 45%; 
+    
+    --Light-2-hue: 240;
+    --Light-2-sat: 20.8%;
+    --Light-2-light: 82.4%;
+    
+    --Accent-1-hue: 151.1;
+    --Accent-1-sat: 82.4%;
+    --Accent-1-light: 56.1%;
+    
+    --Accent-2-hue: 199.1;
+    --Accent-2-sat: 77.3%;
+    --Accent-2-light: 56.9%;
+    
+    --Accent-3-hue: 45.2;
+    --Accent-3-sat: 100%;
+    --Accent-3-light: 52.2%;
+    
+    --Accent-4-hue: 2.8;
+    --Accent-4-sat: 84.7%;
+    --Accent-4-light: 59.2%;
+    
+    --Accent-5-hue: 261.2;
+    --Accent-5-sat: 30.6%;
+    --Accent-5-light: 59.6%;
+    
+    --Accent-6-hue: 177.9;
+    --Accent-6-sat: 100%;
+    --Accent-6-light: 33.7%;
+    
+    --Accent-7-hue: 151.1;
+    --Accent-7-sat: 82.3%;
+    --Accent-7-light: 56.1%;
+    
+    --Hyperlink-hue: 210.4;
+    --Hyperlink-sat: 94.9%;
+    --Hyperlink-light: 38.8%;
+    
+    --FollowedHyperlink-hue: 330.4;
+    --FollowedHyperlink-sat: 30.6%;
+    --FollowedHyperlink-light: 44.7%;
+    
+
+    /*Theme Colors for all the web pages*/
+    --ThemeColors-TextBackground-Dark-1: hsl(var(--Dark-1-hue),var(--Dark-1-sat),var(--Dark-1-light));
+    --ThemeColors-TextBackground-Light-1: hsl(var(--Light-1-hue),var(--Light-1-sat),var(--Light-1-light));
+    --ThemeColors-TextBackground-Dark-2: hsl(var(--Dark-2-hue),var(--Dark-2-sat),var(--Dark-2-light));
+    --ThemeColors-TextBackground-Light-2: hsl(var(--Light-2-hue),var(--Light-2-sat),var(--Light-2-light));
+    --ThemeColors-Accent-1: hsl(var(--Accent-1-hue),var(--Accent-1-sat),var(--Accent-1-light));
+    --ThemeColors-Accent-2: hsl(var(--Accent-2-hue),var(--Accent-2-sat),var(--Accent-2-light));
+    --ThemeColors-Accent-3: hsl(var(--Accent-3-hue),var(--Accent-3-sat),var(--Accent-3-light));
+    --ThemeColors-Accent-4: hsl(var(--Accent-4-hue),var(--Accent-4-sat),var(--Accent-4-light));
+    --ThemeColors-Accent-5: hsl(var(--Accent-5-hue),var(--Accent-5-sat),var(--Accent-5-light));
+    --ThemeColors-Accent-6: hsl(var(--Accent-6-hue),var(--Accent-6-sat),var(--Accent-6-light));
+    --ThemeColors-Accent-7: hsl(var(--Accent-7-hue),var(--Accent-7-sat),var(--Accent-7-light));
+    --ThemeColors-Hyperlink: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),var(--Hyperlink-light));
+    --ThemeColors-FollowedHyperlink: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),var(--FollowedHyperlink-light));
+
+    /*Theme Colors for all the web pages with 20% transparency*/
+    --ThemeColors-TextBackground-Dark-1-Trans-20: hsla(var(--Dark-1-hue),var(--Dark-1-sat),var(--Dark-1-light),80%);
+    --ThemeColors-TextBackground-Light-1-Trans-20: hsla(var(--Light-1-hue),var(--Light-1-sat),var(--Light-1-light),80%);
+    --ThemeColors-TextBackground-Dark-2-Trans-20: hsla(var(--Dark-2-hue),var(--Dark-2-sat),var(--Dark-2-light),80%);
+    --ThemeColors-TextBackground-Light-2-Trans-20: hsla(var(--Light-2-hue),var(--Light-2-sat),var(--Light-2-light),80%);
+    --ThemeColors-Accent-1-Trans-20: hsla(var(--Accent-1-hue),var(--Accent-1-sat),var(--Accent-1-light),80%);
+    --ThemeColors-Accent-2-Trans-20: hsla(var(--Accent-2-hue),var(--Accent-2-sat),var(--Accent-2-light),80%);
+    --ThemeColors-Accent-3-Trans-20: hsla(var(--Accent-3-hue),var(--Accent-3-sat),var(--Accent-3-light),80%);
+    --ThemeColors-Accent-4-Trans-20: hsla(var(--Accent-4-hue),var(--Accent-4-sat),var(--Accent-4-light),80%);
+    --ThemeColors-Accent-5-Trans-20: hsla(var(--Accent-5-hue),var(--Accent-5-sat),var(--Accent-5-light),80%);
+    --ThemeColors-Accent-6-Trans-20: hsla(var(--Accent-6-hue),var(--Accent-6-sat),var(--Accent-6-light),80%);
+    --ThemeColors-Accent-7-Trans-20: hsla(var(--Accent-7-hue),var(--Accent-7-sat),var(--Accent-7-light),80%);
+    --ThemeColors-Hyperlink-Trans-20: hsla(var(--Hyperlink-hue),var(--Hyperlink-sat),var(--Hyperlink-light),80%);
+    --ThemeColors-FollowedHyperlink-Trans-20: hsla(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),var(--FollowedHyperlink-light),80%);
+
+    /*Theme Colors for all the web pages with 50% transparency*/
+    --ThemeColors-TextBackground-Dark-1-Trans-50: hsla(var(--Dark-1-hue),var(--Dark-1-sat),var(--Dark-1-light),50%);
+    --ThemeColors-TextBackground-Light-1-Trans-50: hsla(var(--Light-1-hue),var(--Light-1-sat),var(--Light-1-light),50%);
+    --ThemeColors-TextBackground-Dark-2-Trans-50: hsla(var(--Dark-2-hue),var(--Dark-2-sat),var(--Dark-2-light),50%);
+    --ThemeColors-TextBackground-Light-2-Trans-50: hsla(var(--Light-2-hue),var(--Light-2-sat),var(--Light-2-light),50%);
+    --ThemeColors-Accent-1-Trans-50: hsla(var(--Accent-1-hue),var(--Accent-1-sat),var(--Accent-1-light),50%);
+    --ThemeColors-Accent-2-Trans-50: hsla(var(--Accent-2-hue),var(--Accent-2-sat),var(--Accent-2-light),50%);
+    --ThemeColors-Accent-3-Trans-50: hsla(var(--Accent-3-hue),var(--Accent-3-sat),var(--Accent-3-light),50%);
+    --ThemeColors-Accent-4-Trans-50: hsla(var(--Accent-4-hue),var(--Accent-4-sat),var(--Accent-4-light),50%);
+    --ThemeColors-Accent-5-Trans-50: hsla(var(--Accent-5-hue),var(--Accent-5-sat),var(--Accent-5-light),50%);
+    --ThemeColors-Accent-6-Trans-50: hsla(var(--Accent-6-hue),var(--Accent-6-sat),var(--Accent-6-light),50%);
+    --ThemeColors-Accent-7-Trans-50: hsla(var(--Accent-7-hue),var(--Accent-7-sat),var(--Accent-7-light),50%);
+    --ThemeColors-Hyperlink-Trans-50: hsla(var(--Hyperlink-hue),var(--Hyperlink-sat),var(--Hyperlink-light),50%);
+    --ThemeColors-FollowedHyperlink-Trans-50: hsla(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),var(--FollowedHyperlink-light),50%);
+
+    /*Theme Colors for all the web pages with 80% transparency*/
+    --ThemeColors-TextBackground-Dark-1-Trans-80: hsla(var(--Dark-1-hue),var(--Dark-1-sat),var(--Dark-1-light),20%);
+    --ThemeColors-TextBackground-Light-1-Trans-80: hsla(var(--Light-1-hue),var(--Light-1-sat),var(--Light-1-light),20%);
+    --ThemeColors-TextBackground-Dark-2-Trans-80: hsla(var(--Dark-2-hue),var(--Dark-2-sat),var(--Dark-2-light),20%);
+    --ThemeColors-TextBackground-Light-2-Trans-80: hsla(var(--Light-2-hue),var(--Light-2-sat),var(--Light-2-light),20%);
+    --ThemeColors-Accent-1-Trans-80: hsla(var(--Accent-1-hue),var(--Accent-1-sat),var(--Accent-1-light),20%);
+    --ThemeColors-Accent-2-Trans-80: hsla(var(--Accent-2-hue),var(--Accent-2-sat),var(--Accent-2-light),20%);
+    --ThemeColors-Accent-3-Trans-80: hsla(var(--Accent-3-hue),var(--Accent-3-sat),var(--Accent-3-light),20%);
+    --ThemeColors-Accent-4-Trans-80: hsla(var(--Accent-4-hue),var(--Accent-4-sat),var(--Accent-4-light),20%);
+    --ThemeColors-Accent-5-Trans-80: hsla(var(--Accent-5-hue),var(--Accent-5-sat),var(--Accent-5-light),20%);
+    --ThemeColors-Accent-6-Trans-80: hsla(var(--Accent-6-hue),var(--Accent-6-sat),var(--Accent-6-light),20%);
+    --ThemeColors-Accent-7-Trans-80: hsla(var(--Accent-7-hue),var(--Accent-7-sat),var(--Accent-7-light),20%);
+    --ThemeColors-Hyperlink-Trans-80: hsla(var(--Hyperlink-hue),var(--Hyperlink-sat),var(--Hyperlink-light),20%);
+    --ThemeColors-FollowedHyperlink-Trans-80: hsla(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),var(--FollowedHyperlink-light),20%);
+
+    /*Theme Colors 20% Darker*/
+    --ThemeColors-TextBackground-Dark-1-Darker-20: hsl(var(--Dark-1-hue),var(--Dark-1-sat),calc(var(--Dark-1-light)*0.8));
+    --ThemeColors-TextBackground-Light-1-Darker-20: hsl(var(--Light-1-hue),var(--Light-1-sat),calc(var(--Light-1-light)*0.8));
+    --ThemeColors-TextBackground-Dark-2-Darker-20: hsl(var(--Dark-2-hue),var(--Dark-2-sat),calc(var(--Dark-2-light)*0.8));
+    --ThemeColors-TextBackground-Light-2-Darker-20: hsl(var(--Light-2-hue),var(--Light-2-sat),calc(var(--Light-2-light)*0.8));
+    --ThemeColors-Accent-1-Darker-20: hsl(var(--Accent-1-hue),var(--Accent-1-sat),calc(var(--Accent-1-light)*0.8));
+    --ThemeColors-Accent-2-Darker-20: hsl(var(--Accent-2-hue),var(--Accent-2-sat),calc(var(--Accent-2-light)*0.8));
+    --ThemeColors-Accent-3-Darker-20: hsl(var(--Accent-3-hue),var(--Accent-3-sat),calc(var(--Accent-3-light)*0.8));
+    --ThemeColors-Accent-4-Darker-20: hsl(var(--Accent-4-hue),var(--Accent-4-sat),calc(var(--Accent-4-light)*0.8));
+    --ThemeColors-Accent-5-Darker-20: hsl(var(--Accent-5-hue),var(--Accent-5-sat),calc(var(--Accent-5-light)*0.8));
+    --ThemeColors-Accent-6-Darker-20: hsl(var(--Accent-6-hue),var(--Accent-6-sat),calc(var(--Accent-6-light)*0.8));
+    --ThemeColors-Accent-7-Darker-20: hsl(var(--Accent-7-hue),var(--Accent-7-sat),calc(var(--Accent-7-light)*0.8));
+    --ThemeColors-Hyperlink-Darker-20: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),calc(var(--Hyperlink-light)*0.8));
+    --ThemeColors-FollowedHyperlink-Darker-20: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),calc(var(--FollowedHyperlink-light)*0.8));
+    
+    /*Theme Colors 50% Darker*/
+    --ThemeColors-TextBackground-Dark-1-Darker-50: hsl(var(--Dark-1-hue),var(--Dark-1-sat),calc(var(--Dark-1-light)*0.5));
+    --ThemeColors-TextBackground-Light-1-Darker-50: hsl(var(--Light-1-hue),var(--Light-1-sat),calc(var(--Light-1-light)*0.5));
+    --ThemeColors-TextBackground-Dark-2-Darker-50: hsl(var(--Dark-2-hue),var(--Dark-2-sat),calc(var(--Dark-2-light)*0.5));
+    --ThemeColors-TextBackground-Light-2-Darker-50: hsl(var(--Light-2-hue),var(--Light-2-sat),calc(var(--Light-2-light)*0.5));
+    --ThemeColors-Accent-1-Darker-50: hsl(var(--Accent-1-hue),var(--Accent-1-sat),calc(var(--Accent-1-light)*0.5));
+    --ThemeColors-Accent-2-Darker-50: hsl(var(--Accent-2-hue),var(--Accent-2-sat),calc(var(--Accent-2-light)*0.5));
+    --ThemeColors-Accent-3-Darker-50: hsl(var(--Accent-3-hue),var(--Accent-3-sat),calc(var(--Accent-3-light)*0.5));
+    --ThemeColors-Accent-4-Darker-50: hsl(var(--Accent-4-hue),var(--Accent-4-sat),calc(var(--Accent-4-light)*0.5));
+    --ThemeColors-Accent-5-Darker-50: hsl(var(--Accent-5-hue),var(--Accent-5-sat),calc(var(--Accent-5-light)*0.5));
+    --ThemeColors-Accent-6-Darker-50: hsl(var(--Accent-6-hue),var(--Accent-6-sat),calc(var(--Accent-6-light)*0.5));
+    --ThemeColors-Accent-7-Darker-50: hsl(var(--Accent-7-hue),var(--Accent-7-sat),calc(var(--Accent-7-light)*0.5));
+    --ThemeColors-Hyperlink-Darker-50: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),calc(var(--Hyperlink-light)*0.5));
+    --ThemeColors-FollowedHyperlink-Darker-50: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),calc(var(--FollowedHyperlink-light)*0.5));
+    
+    /*Theme Colors 80% Darker*/
+    --ThemeColors-TextBackground-Dark-1-Darker-80: hsl(var(--Dark-1-hue),var(--Dark-1-sat),calc(var(--Dark-1-light)*0.2));
+    --ThemeColors-TextBackground-Light-1-Darker-80: hsl(var(--Light-1-hue),var(--Light-1-sat),calc(var(--Light-1-light)*0.2));
+    --ThemeColors-TextBackground-Dark-2-Darker-80: hsl(var(--Dark-2-hue),var(--Dark-2-sat),calc(var(--Dark-2-light)*0.2));
+    --ThemeColors-TextBackground-Light-2-Darker-80: hsl(var(--Light-2-hue),var(--Light-2-sat),calc(var(--Light-2-light)*0.2));
+    --ThemeColors-Accent-1-Darker-80: hsl(var(--Accent-1-hue),var(--Accent-1-sat),calc(var(--Accent-1-light)*0.2));
+    --ThemeColors-Accent-2-Darker-80: hsl(var(--Accent-2-hue),var(--Accent-2-sat),calc(var(--Accent-2-light)*0.2));
+    --ThemeColors-Accent-3-Darker-80: hsl(var(--Accent-3-hue),var(--Accent-3-sat),calc(var(--Accent-3-light)*0.2));
+    --ThemeColors-Accent-4-Darker-80: hsl(var(--Accent-4-hue),var(--Accent-4-sat),calc(var(--Accent-4-light)*0.2));
+    --ThemeColors-Accent-5-Darker-80: hsl(var(--Accent-5-hue),var(--Accent-5-sat),calc(var(--Accent-5-light)*0.2));
+    --ThemeColors-Accent-6-Darker-80: hsl(var(--Accent-6-hue),var(--Accent-6-sat),calc(var(--Accent-6-light)*0.2));
+    --ThemeColors-Accent-7-Darker-80: hsl(var(--Accent-7-hue),var(--Accent-7-sat),calc(var(--Accent-7-light)*0.2));
+    --ThemeColors-Hyperlink-Darker-80: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),calc(var(--Hyperlink-light)*0.2));
+    --ThemeColors-FollowedHyperlink-Darker-80: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),calc(var(--FollowedHyperlink-light)*0.2));
+
+    /*Theme Colors 20% Lighter*/
+    --ThemeColors-TextBackground-Dark-1-Lighter-20: hsl(var(--Dark-1-hue),var(--Dark-1-sat),calc(var(--Dark-1-light)*0.8 + 20%));
+    --ThemeColors-TextBackground-Light-1-Lighter-20: hsl(var(--Light-1-hue),var(--Light-1-sat),calc(var(--Light-1-light)*0.8 + 20%));
+    --ThemeColors-TextBackground-Dark-2-Lighter-20: hsl(var(--Dark-2-hue),var(--Dark-2-sat),calc(var(--Dark-2-light)*0.8 + 20%));
+    --ThemeColors-TextBackground-Light-2-Lighter-20: hsl(var(--Light-2-hue),var(--Light-2-sat),calc(var(--Light-2-light)*0.8 + 20%));
+    --ThemeColors-Accent-1-Lighter-20: hsl(var(--Accent-1-hue),var(--Accent-1-sat),calc(var(--Accent-1-light)*0.8 + 20%));
+    --ThemeColors-Accent-2-Lighter-20: hsl(var(--Accent-2-hue),var(--Accent-2-sat),calc(var(--Accent-2-light)*0.8 + 20%));
+    --ThemeColors-Accent-3-Lighter-20: hsl(var(--Accent-3-hue),var(--Accent-3-sat),calc(var(--Accent-3-light)*0.8 + 20%));
+    --ThemeColors-Accent-4-Lighter-20: hsl(var(--Accent-4-hue),var(--Accent-4-sat),calc(var(--Accent-4-light)*0.8 + 20%));
+    --ThemeColors-Accent-5-Lighter-20: hsl(var(--Accent-5-hue),var(--Accent-5-sat),calc(var(--Accent-5-light)*0.8 + 20%));
+    --ThemeColors-Accent-6-Lighter-20: hsl(var(--Accent-6-hue),var(--Accent-6-sat),calc(var(--Accent-6-light)*0.8 + 20%));
+    --ThemeColors-Accent-7-Lighter-20: hsl(var(--Accent-7-hue),var(--Accent-7-sat),calc(var(--Accent-7-light)*0.8 + 20%));
+    --ThemeColors-Hyperlink-Lighter-20: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),calc(var(--Hyperlink-light)*0.8 + 20%));
+    --ThemeColors-FollowedHyperlink-Lighter-20: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),calc(var(--FollowedHyperlink-light)*0.8 + 20%));
+    
+    /*Theme Colors 50% Lighter*/
+    --ThemeColors-TextBackground-Dark-1-Lighter-50: hsl(var(--Dark-1-hue),var(--Dark-1-sat),calc(var(--Dark-1-light)*0.5 + 50%));
+    --ThemeColors-TextBackground-Light-1-Lighter-50: hsl(var(--Light-1-hue),var(--Light-1-sat),calc(var(--Light-1-light)*0.5 + 50%));
+    --ThemeColors-TextBackground-Dark-2-Lighter-50: hsl(var(--Dark-2-hue),var(--Dark-2-sat),calc(var(--Dark-2-light)*0.5 + 50%));
+    --ThemeColors-TextBackground-Light-2-Lighter-50: hsl(var(--Light-2-hue),var(--Light-2-sat),calc(var(--Light-2-light)*0.5 + 50%));
+    --ThemeColors-Accent-1-Lighter-50: hsl(var(--Accent-1-hue),var(--Accent-1-sat),calc(var(--Accent-1-light)*0.5 + 50%));
+    --ThemeColors-Accent-2-Lighter-50: hsl(var(--Accent-2-hue),var(--Accent-2-sat),calc(var(--Accent-2-light)*0.5 + 50%));
+    --ThemeColors-Accent-3-Lighter-50: hsl(var(--Accent-3-hue),var(--Accent-3-sat),calc(var(--Accent-3-light)*0.5 + 50%));
+    --ThemeColors-Accent-4-Lighter-50: hsl(var(--Accent-4-hue),var(--Accent-4-sat),calc(var(--Accent-4-light)*0.5 + 50%));
+    --ThemeColors-Accent-5-Lighter-50: hsl(var(--Accent-5-hue),var(--Accent-5-sat),calc(var(--Accent-5-light)*0.5 + 50%));
+    --ThemeColors-Accent-6-Lighter-50: hsl(var(--Accent-6-hue),var(--Accent-6-sat),calc(var(--Accent-6-light)*0.5 + 50%));
+    --ThemeColors-Accent-7-Lighter-50: hsl(var(--Accent-7-hue),var(--Accent-7-sat),calc(var(--Accent-7-light)*0.5 + 50%));
+    --ThemeColors-Hyperlink-Lighter-50: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),calc(var(--Hyperlink-light)*0.5 + 50%));
+    --ThemeColors-FollowedHyperlink-Lighter-50: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),calc(var(--FollowedHyperlink-light)*0.5 + 50%));
+    
+    /*Theme Colors 80% Lighter*/
+    --ThemeColors-TextBackground-Dark-1-Lighter-80: hsl(var(--Dark-1-hue),var(--Dark-1-sat),calc(var(--Dark-1-light)*0.2 + 80%));
+    --ThemeColors-TextBackground-Light-1-Lighter-80: hsl(var(--Light-1-hue),var(--Light-1-sat),calc(var(--Light-1-light)*0.2 + 80%));
+    --ThemeColors-TextBackground-Dark-2-Lighter-80: hsl(var(--Dark-2-hue),var(--Dark-2-sat),calc(var(--Dark-2-light)*0.2 + 80%));
+    --ThemeColors-TextBackground-Light-2-Lighter-80: hsl(var(--Light-2-hue),var(--Light-2-sat),calc(var(--Light-2-light)*0.2 + 80%));
+    --ThemeColors-Accent-1-Lighter-80: hsl(var(--Accent-1-hue),var(--Accent-1-sat),calc(var(--Accent-1-light)*0.2 + 80%));
+    --ThemeColors-Accent-2-Lighter-80: hsl(var(--Accent-2-hue),var(--Accent-2-sat),calc(var(--Accent-2-light)*0.2 + 80%));
+    --ThemeColors-Accent-3-Lighter-80: hsl(var(--Accent-3-hue),var(--Accent-3-sat),calc(var(--Accent-3-light)*0.2 + 80%));
+    --ThemeColors-Accent-4-Lighter-80: hsl(var(--Accent-4-hue),var(--Accent-4-sat),calc(var(--Accent-4-light)*0.2 + 80%));
+    --ThemeColors-Accent-5-Lighter-80: hsl(var(--Accent-5-hue),var(--Accent-5-sat),calc(var(--Accent-5-light)*0.2 + 80%));
+    --ThemeColors-Accent-6-Lighter-80: hsl(var(--Accent-6-hue),var(--Accent-6-sat),calc(var(--Accent-6-light)*0.2 + 80%));
+    --ThemeColors-Accent-7-Lighter-80: hsl(var(--Accent-7-hue),var(--Accent-7-sat),calc(var(--Accent-7-light)*0.2 + 80%));
+    --ThemeColors-Hyperlink-Lighter-80: hsl(var(--Hyperlink-hue),var(--Hyperlink-sat),calc(var(--Hyperlink-light)*0.2 + 80%));
+    --ThemeColors-FollowedHyperlink-Lighter-80: hsl(var(--FollowedHyperlink-hue),var(--FollowedHyperlink-sat),calc(var(--FollowedHyperlink-light)*0.2 + 80%));
+
+}
+
+/*Create Theme Color Background classes*/
+.background-dark-1, .hover-background-dark-1:hover { background: var(--ThemeColors-TextBackground-Dark-1) !important }
+.background-dark-2, .hover-background-dark-2:hover { background: var(--ThemeColors-TextBackground-Dark-2) !important }
+.background-light-1, .hover-background-light-1:hover { background: var(--ThemeColors-TextBackground-Light-1) !important }
+.background-light-2, .hover-background-light-2:hover { background: var(--ThemeColors-TextBackground-Light-2) !important }
+.background-accent-1, .hover-background-accent-1:hover { background: var(--ThemeColors-Accent-1) !important }
+.background-accent-2, .hover-background-accent-2:hover { background: var(--ThemeColors-Accent-2) !important }
+.background-accent-3, .hover-background-accent-3:hover { background: var(--ThemeColors-Accent-3) !important }
+.background-accent-4, .hover-background-accent-4:hover { background: var(--ThemeColors-Accent-4) !important }
+.background-accent-5, .hover-background-accent-5:hover { background: var(--ThemeColors-Accent-5) !important }
+.background-accent-6, .hover-background-accent-6:hover { background: var(--ThemeColors-Accent-6) !important }
+.background-accent-7, .hover-background-accent-7:hover { background: var(--ThemeColors-Accent-7) !important }
+
+.background-dark-1-trans-20, .hover-background-dark-1-trans-20:hover { background: var(--ThemeColors-TextBackground-Dark-1-Trans-20) !important }
+.background-dark-2-trans-20, .hover-background-dark-2-trans-20:hover { background: var(--ThemeColors-TextBackground-Dark-2-Trans-20) !important }
+.background-light-1-trans-20, .hover-background-light-1-trans-20:hover { background: var(--ThemeColors-TextBackground-Light-1-Trans-20) !important }
+.background-light-2-trans-20, .hover-background-light-2-trans-20:hover { background: var(--ThemeColors-TextBackground-Light-2-Trans-20) !important }
+.background-accent-1-trans-20, .hover-background-accent-1-trans-20:hover { background: var(--ThemeColors-Accent-1-Trans-20) !important }
+.background-accent-2-trans-20, .hover-background-accent-2-trans-20:hover { background: var(--ThemeColors-Accent-2-Trans-20) !important }
+.background-accent-3-trans-20, .hover-background-accent-3-trans-20:hover { background: var(--ThemeColors-Accent-3-Trans-20) !important }
+.background-accent-4-trans-20, .hover-background-accent-4-trans-20:hover { background: var(--ThemeColors-Accent-4-Trans-20) !important }
+.background-accent-5-trans-20, .hover-background-accent-5-trans-20:hover { background: var(--ThemeColors-Accent-5-Trans-20) !important }
+.background-accent-6-trans-20, .hover-background-accent-6-trans-20:hover { background: var(--ThemeColors-Accent-6-Trans-20) !important }
+.background-accent-7-trans-20, .hover-background-accent-7-trans-20:hover { background: var(--ThemeColors-Accent-7-Trans-20) !important }
+
+.background-dark-1-trans-50, .hover-background-dark-1-trans-50:hover { background: var(--ThemeColors-TextBackground-Dark-1-Trans-50) !important }
+.background-dark-2-trans-50, .hover-background-dark-2-trans-50:hover { background: var(--ThemeColors-TextBackground-Dark-2-Trans-50) !important }
+.background-light-1-trans-50, .hover-background-light-1-trans-50:hover { background: var(--ThemeColors-TextBackground-Light-1-Trans-50) !important }
+.background-light-2-trans-50, .hover-background-light-2-trans-50:hover { background: var(--ThemeColors-TextBackground-Light-2-Trans-50) !important }
+.background-accent-1-trans-50, .hover-background-accent-1-trans-50:hover  { background: var(--ThemeColors-Accent-1-Trans-50) !important }
+.background-accent-2-trans-50, .hover-background-accent-2-trans-50:hover { background: var(--ThemeColors-Accent-2-Trans-50) !important }
+.background-accent-3-trans-50, .hover-background-accent-3-trans-50:hover { background: var(--ThemeColors-Accent-3-Trans-50) !important }
+.background-accent-4-trans-50, .hover-background-accent-4-trans-50:hover { background: var(--ThemeColors-Accent-4-Trans-50) !important }
+.background-accent-5-trans-50, .hover-background-accent-5-trans-50:hover { background: var(--ThemeColors-Accent-5-Trans-50) !important }
+.background-accent-6-trans-50, .hover-background-accent-6-trans-50:hover { background: var(--ThemeColors-Accent-6-Trans-50) !important }
+.background-accent-7-trans-50, .hover-background-accent-7-trans-50:hover { background: var(--ThemeColors-Accent-7-Trans-50) !important }
+
+.background-dark-1-trans-80, .hover-background-dark-1-trans-80:hover { background: var(--ThemeColors-TextBackground-Dark-1-Trans-80) !important }
+.background-dark-2-trans-80, .hover-background-dark-2-trans-80:hover { background: var(--ThemeColors-TextBackground-Dark-2-Trans-80) !important }
+.background-light-1-trans-80, .hover-background-light-1-trans-80:hover { background: var(--ThemeColors-TextBackground-Light-1-Trans-80) !important }
+.background-light-2-trans-80, .hover-background-light-2-trans-80:hover { background: var(--ThemeColors-TextBackground-Light-2-Trans-80) !important }
+.background-accent-1-trans-80, .hover-background-accent-1-trans-80:hover { background: var(--ThemeColors-Accent-1-Trans-80) !important }
+.background-accent-2-trans-80, .hover-background-accent-2-trans-80:hover { background: var(--ThemeColors-Accent-2-Trans-80) !important }
+.background-accent-3-trans-80, .hover-background-accent-3-trans-80:hover { background: var(--ThemeColors-Accent-3-Trans-80) !important }
+.background-accent-4-trans-80, .hover-background-accent-4-trans-80:hover { background: var(--ThemeColors-Accent-4-Trans-80) !important }
+.background-accent-5-trans-80, .hover-background-accent-5-trans-80:hover { background: var(--ThemeColors-Accent-5-Trans-80) !important }
+.background-accent-6-trans-80, .hover-background-accent-6-trans-80:hover { background: var(--ThemeColors-Accent-6-Trans-80) !important }
+.background-accent-7-trans-80, .hover-background-accent-7-trans-80:hover { background: var(--ThemeColors-Accent-7-Trans-80) !important }
+
+.background-dark-1-darker-20, .hover-background-dark-1-darker-20:hover { background: var(--ThemeColors-TextBackground-Dark-1-Darker-20) !important }
+.background-dark-2-darker-20, .hover-background-dark-2-darker-20:hover { background: var(--ThemeColors-TextBackground-Dark-2-Darker-20) !important }
+.background-light-1-darker-20, .hover-background-light-1-darker-20:hover { background: var(--ThemeColors-TextBackground-Light-1-Darker-20) !important }
+.background-light-2-darker-20, .hover-background-light-2-darker-20:hover { background: var(--ThemeColors-TextBackground-Light-2-Darker-20) !important }
+.background-accent-1-darker-20, .hover-background-accent-1-darker-20:hover { background: var(--ThemeColors-Accent-1-Darker-20) !important }
+.background-accent-2-darker-20, .hover-background-accent-2-darker-20:hover { background: var(--ThemeColors-Accent-2-Darker-20) !important }
+.background-accent-3-darker-20, .hover-background-accent-3-darker-20:hover { background: var(--ThemeColors-Accent-3-Darker-20) !important }
+.background-accent-4-darker-20, .hover-background-accent-4-darker-20:hover { background: var(--ThemeColors-Accent-4-Darker-20) !important }
+.background-accent-5-darker-20, .hover-background-accent-5-darker-20:hover { background: var(--ThemeColors-Accent-5-Darker-20) !important }
+.background-accent-6-darker-20, .hover-background-accent-6-darker-20:hover { background: var(--ThemeColors-Accent-6-Darker-20) !important }
+.background-accent-7-darker-20, .hover-background-accent-7-darker-20:hover { background: var(--ThemeColors-Accent-7-Darker-20) !important }
+
+.background-dark-1-darker-50, .hover-background-dark-1-darker-50:hover { background: var(--ThemeColors-TextBackground-Dark-1-Darker-50) !important }
+.background-dark-2-darker-50, .hover-background-dark-2-darker-50:hover { background: var(--ThemeColors-TextBackground-Dark-2-Darker-50) !important }
+.background-light-1-darker-50, .hover-background-light-1-darker-50:hover { background: var(--ThemeColors-TextBackground-Light-1-Darker-50) !important }
+.background-light-2-darker-50, .hover-background-light-2-darker-50:hover { background: var(--ThemeColors-TextBackground-Light-2-Darker-50) !important }
+.background-accent-1-darker-50, .hover-background-accent-1-darker-50:hover { background: var(--ThemeColors-Accent-1-Darker-50) !important }
+.background-accent-2-darker-50, .hover-background-accent-2-darker-50:hover { background: var(--ThemeColors-Accent-2-Darker-50) !important }
+.background-accent-3-darker-50, .hover-background-accent-3-darker-50:hover { background: var(--ThemeColors-Accent-3-Darker-50) !important }
+.background-accent-4-darker-50, .hover-background-accent-4-darker-50:hover { background: var(--ThemeColors-Accent-4-Darker-50) !important }
+.background-accent-5-darker-50, .hover-background-accent-5-darker-50:hover { background: var(--ThemeColors-Accent-5-Darker-50) !important }
+.background-accent-6-darker-50, .hover-background-accent-6-darker-50:hover { background: var(--ThemeColors-Accent-6-Darker-50) !important }
+.background-accent-7-darker-50, .hover-background-accent-7-darker-50:hover { background: var(--ThemeColors-Accent-7-Darker-50) !important }
+
+.background-dark-1-darker-80, .hover-background-dark-1-darker-80:hover { background: var(--ThemeColors-TextBackground-Dark-1-Darker-80) !important }
+.background-dark-2-darker-80, .hover-background-dark-2-darker-80:hover { background: var(--ThemeColors-TextBackground-Dark-2-Darker-80) !important }
+.background-light-1-darker-80, .hover-background-light-1-darker-80:hover { background: var(--ThemeColors-TextBackground-Light-1-Darker-80) !important }
+.background-light-2-darker-80, .hover-background-light-2-darker-80:hover { background: var(--ThemeColors-TextBackground-Light-2-Darker-80) !important }
+.background-accent-1-darker-80, .hover-background-accent-1-darker-80:hover { background: var(--ThemeColors-Accent-1-Darker-80) !important }
+.background-accent-2-darker-80, .hover-background-accent-2-darker-80:hover { background: var(--ThemeColors-Accent-2-Darker-80) !important }
+.background-accent-3-darker-80, .hover-background-accent-3-darker-80:hover { background: var(--ThemeColors-Accent-3-Darker-80) !important }
+.background-accent-4-darker-80, .hover-background-accent-4-darker-80:hover { background: var(--ThemeColors-Accent-4-Darker-80) !important }
+.background-accent-5-darker-80, .hover-background-accent-5-darker-80:hover { background: var(--ThemeColors-Accent-5-Darker-80) !important }
+.background-accent-6-darker-80, .hover-background-accent-6-darker-80:hover { background: var(--ThemeColors-Accent-6-Darker-80) !important }
+.background-accent-7-darker-80, .hover-background-accent-7-darker-80:hover { background: var(--ThemeColors-Accent-7-Darker-80) !important }
+
+.background-dark-1-lighter-20, .hover-background-dark-1-lighter-20:hover { background: var(--ThemeColors-TextBackground-Dark-1-Lighter-20) !important }
+.background-dark-2-lighter-20, .hover-background-dark-2-lighter-20:hover { background: var(--ThemeColors-TextBackground-Dark-2-Lighter-20) !important }
+.background-light-1-lighter-20, .hover-background-light-1-lighter-20:hover { background: var(--ThemeColors-TextBackground-Light-1-Lighter-20) !important }
+.background-light-2-lighter-20, .hover-background-light-2-lighter-20:hover { background: var(--ThemeColors-TextBackground-Light-2-Lighter-20) !important }
+.background-accent-1-lighter-20, .hover-background-accent-1-lighter-20:hover { background: var(--ThemeColors-Accent-1-Lighter-20) !important }
+.background-accent-2-lighter-20, .hover-background-accent-2-lighter-20:hover { background: var(--ThemeColors-Accent-2-Lighter-20) !important }
+.background-accent-3-lighter-20, .hover-background-accent-3-lighter-20:hover { background: var(--ThemeColors-Accent-3-Lighter-20) !important }
+.background-accent-4-lighter-20, .hover-background-accent-4-lighter-20:hover { background: var(--ThemeColors-Accent-4-Lighter-20) !important }
+.background-accent-5-lighter-20, .hover-background-accent-5-lighter-20:hover { background: var(--ThemeColors-Accent-5-Lighter-20) !important }
+.background-accent-6-lighter-20, .hover-background-accent-6-lighter-20:hover { background: var(--ThemeColors-Accent-6-Lighter-20) !important }
+.background-accent-7-lighter-20, .hover-background-accent-7-lighter-20:hover { background: var(--ThemeColors-Accent-7-Lighter-20) !important }
+
+.background-dark-1-lighter-50, .hover-background-dark-1-lighter-50:hover { background: var(--ThemeColors-TextBackground-Dark-1-Lighter-50) !important }
+.background-dark-2-lighter-50, .hover-background-dark-2-lighter-50:hover { background: var(--ThemeColors-TextBackground-Dark-2-Lighter-50) !important }
+.background-light-1-lighter-50, .hover-background-light-1-lighter-50:hover { background: var(--ThemeColors-TextBackground-Light-1-Lighter-50) !important }
+.background-light-2-lighter-50, .hover-background-light-2-lighter-50:hover { background: var(--ThemeColors-TextBackground-Light-2-Lighter-50) !important }
+.background-accent-1-lighter-50, .hover-background-accent-1-lighter-50:hover { background: var(--ThemeColors-Accent-1-Lighter-50) !important }
+.background-accent-2-lighter-50, .hover-background-accent-2-lighter-50:hover { background: var(--ThemeColors-Accent-2-Lighter-50) !important }
+.background-accent-3-lighter-50, .hover-background-accent-3-lighter-50:hover { background: var(--ThemeColors-Accent-3-Lighter-50) !important }
+.background-accent-4-lighter-50, .hover-background-accent-4-lighter-50:hover { background: var(--ThemeColors-Accent-4-Lighter-50) !important }
+.background-accent-5-lighter-50, .hover-background-accent-5-lighter-50:hover { background: var(--ThemeColors-Accent-5-Lighter-50) !important }
+.background-accent-6-lighter-50, .hover-background-accent-6-lighter-50:hover { background: var(--ThemeColors-Accent-6-Lighter-50) !important }
+.background-accent-7-lighter-50, .hover-background-accent-7-lighter-50:hover { background: var(--ThemeColors-Accent-7-Lighter-50) !important }
+
+.background-dark-1-lighter-80, .hover-background-dark-1-lighter-80:hover { background: var(--ThemeColors-TextBackground-Dark-1-Lighter-80) !important }
+.background-dark-2-lighter-80, .hover-background-dark-2-lighter-80:hover { background: var(--ThemeColors-TextBackground-Dark-2-Lighter-80) !important }
+.background-light-1-lighter-80, .hover-background-light-1-lighter-80:hover { background: var(--ThemeColors-TextBackground-Light-1-Lighter-80) !important }
+.background-light-2-lighter-80, .hover-background-light-2-lighter-80:hover { background: var(--ThemeColors-TextBackground-Light-2-Lighter-80) !important }
+.background-accent-1-lighter-80, .hover-background-accent-1-lighter-80:hover { background: var(--ThemeColors-Accent-1-Lighter-80) !important }
+.background-accent-2-lighter-80, .hover-background-accent-2-lighter-80:hover { background: var(--ThemeColors-Accent-2-Lighter-80) !important }
+.background-accent-3-lighter-80, .hover-background-accent-3-lighter-80:hover { background: var(--ThemeColors-Accent-3-Lighter-80) !important }
+.background-accent-4-lighter-80, .hover-background-accent-4-lighter-80:hover { background: var(--ThemeColors-Accent-4-Lighter-80) !important }
+.background-accent-5-lighter-80, .hover-background-accent-5-lighter-80:hover { background: var(--ThemeColors-Accent-5-Lighter-80) !important }
+.background-accent-6-lighter-80, .hover-background-accent-6-lighter-80:hover { background: var(--ThemeColors-Accent-6-Lighter-80) !important }
+.background-accent-7-lighter-80, .hover-background-accent-7-lighter-80:hover { background: var(--ThemeColors-Accent-7-Lighter-80) !important }
+
+
+/*Create Theme Color text classes*/
+.text-dark-1, .hover-text-dark-1:hover { color: var(--ThemeColors-TextBackground-Dark-1) !important }
+.text-dark-2, .hover-text-dark-2:hover { color: var(--ThemeColors-TextBackground-Dark-2) !important }
+.text-light-1, .hover-text-light-1:hover { color: var(--ThemeColors-TextBackground-Light-1) !important }
+.text-light-2, .hover-text-light-2:hover { color: var(--ThemeColors-TextBackground-Light-2) !important }
+.text-accent-1, .hover-text-accent-1:hover { color: var(--ThemeColors-Accent-1) !important }
+.text-accent-2, .hover-text-accent-2:hover { color: var(--ThemeColors-Accent-2) !important }
+.text-accent-3, .hover-text-accent-3:hover { color: var(--ThemeColors-Accent-3) !important }
+.text-accent-4, .hover-text-accent-4:hover { color: var(--ThemeColors-Accent-4) !important }
+.text-accent-5, .hover-text-accent-5:hover { color: var(--ThemeColors-Accent-5) !important }
+.text-accent-6, .hover-text-accent-6:hover { color: var(--ThemeColors-Accent-6) !important }
+.text-accent-7, .hover-text-accent-7:hover { color: var(--ThemeColors-Accent-7) !important }
+
+.text-dark-1-trans-20, .hover-text-dark-1-trans-20:hover { color: var(--ThemeColors-TextBackground-Dark-1-Trans-20) !important }
+.text-dark-2-trans-20, .hover-text-dark-2-trans-20:hover { color: var(--ThemeColors-TextBackground-Dark-2-Trans-20) !important }
+.text-light-1-trans-20, .hover-text-light-1-trans-20:hover { color: var(--ThemeColors-TextBackground-Light-1-Trans-20) !important }
+.text-light-2-trans-20, .hover-text-light-2-trans-20:hover { color: var(--ThemeColors-TextBackground-Light-2-Trans-20) !important }
+.text-accent-1-trans-20, .hover-text-accent-1-trans-20:hover { color: var(--ThemeColors-Accent-1-Trans-20) !important }
+.text-accent-2-trans-20, .hover-text-accent-2-trans-20:hover { color: var(--ThemeColors-Accent-2-Trans-20) !important }
+.text-accent-3-trans-20, .hover-text-accent-3-trans-20:hover { color: var(--ThemeColors-Accent-3-Trans-20) !important }
+.text-accent-4-trans-20, .hover-text-accent-4-trans-20:hover { color: var(--ThemeColors-Accent-4-Trans-20) !important }
+.text-accent-5-trans-20, .hover-text-accent-5-trans-20:hover { color: var(--ThemeColors-Accent-5-Trans-20) !important }
+.text-accent-6-trans-20, .hover-text-accent-6-trans-20:hover { color: var(--ThemeColors-Accent-6-Trans-20) !important }
+.text-accent-7-trans-20, .hover-text-accent-7-trans-20:hover { color: var(--ThemeColors-Accent-7-Trans-20) !important }
+
+.text-dark-1-trans-50, .hover-text-dark-1-trans-50:hover { color: var(--ThemeColors-TextBackground-Dark-1-Trans-50) !important }
+.text-dark-2-trans-50, .hover-text-dark-2-trans-50:hover { color: var(--ThemeColors-TextBackground-Dark-2-Trans-50) !important }
+.text-light-1-trans-50, .hover-text-light-1-trans-50:hover { color: var(--ThemeColors-TextBackground-Light-1-Trans-50) !important }
+.text-light-2-trans-50, .hover-text-light-2-trans-50:hover { color: var(--ThemeColors-TextBackground-Light-2-Trans-50) !important }
+.text-accent-1-trans-50, .hover-text-accent-1-trans-50:hover  { color: var(--ThemeColors-Accent-1-Trans-50) !important }
+.text-accent-2-trans-50, .hover-text-accent-2-trans-50:hover { color: var(--ThemeColors-Accent-2-Trans-50) !important }
+.text-accent-3-trans-50, .hover-text-accent-3-trans-50:hover { color: var(--ThemeColors-Accent-3-Trans-50) !important }
+.text-accent-4-trans-50, .hover-text-accent-4-trans-50:hover { color: var(--ThemeColors-Accent-4-Trans-50) !important }
+.text-accent-5-trans-50, .hover-text-accent-5-trans-50:hover { color: var(--ThemeColors-Accent-5-Trans-50) !important }
+.text-accent-6-trans-50, .hover-text-accent-6-trans-50:hover { color: var(--ThemeColors-Accent-6-Trans-50) !important }
+.text-accent-7-trans-50, .hover-text-accent-7-trans-50:hover { color: var(--ThemeColors-Accent-7-Trans-50) !important }
+
+.text-dark-1-trans-80, .hover-text-dark-1-trans-80:hover { color: var(--ThemeColors-TextBackground-Dark-1-Trans-80) !important }
+.text-dark-2-trans-80, .hover-text-dark-2-trans-80:hover { color: var(--ThemeColors-TextBackground-Dark-2-Trans-80) !important }
+.text-light-1-trans-80, .hover-text-light-1-trans-80:hover { color: var(--ThemeColors-TextBackground-Light-1-Trans-80) !important }
+.text-light-2-trans-80, .hover-text-light-2-trans-80:hover { color: var(--ThemeColors-TextBackground-Light-2-Trans-80) !important }
+.text-accent-1-trans-80, .hover-text-accent-1-trans-80:hover { color: var(--ThemeColors-Accent-1-Trans-80) !important }
+.text-accent-2-trans-80, .hover-text-accent-2-trans-80:hover { color: var(--ThemeColors-Accent-2-Trans-80) !important }
+.text-accent-3-trans-80, .hover-text-accent-3-trans-80:hover { color: var(--ThemeColors-Accent-3-Trans-80) !important }
+.text-accent-4-trans-80, .hover-text-accent-4-trans-80:hover { color: var(--ThemeColors-Accent-4-Trans-80) !important }
+.text-accent-5-trans-80, .hover-text-accent-5-trans-80:hover { color: var(--ThemeColors-Accent-5-Trans-80) !important }
+.text-accent-6-trans-80, .hover-text-accent-6-trans-80:hover { color: var(--ThemeColors-Accent-6-Trans-80) !important }
+.text-accent-7-trans-80, .hover-text-accent-7-trans-80:hover { color: var(--ThemeColors-Accent-7-Trans-80) !important }
+
+.text-dark-1-darker-20, .hover-text-dark-1-darker-20:hover { color: var(--ThemeColors-TextBackground-Dark-1-Darker-20) !important }
+.text-dark-2-darker-20, .hover-text-dark-2-darker-20:hover { color: var(--ThemeColors-TextBackground-Dark-2-Darker-20) !important }
+.text-light-1-darker-20, .hover-text-light-1-darker-20:hover { color: var(--ThemeColors-TextBackground-Light-1-Darker-20) !important }
+.text-light-2-darker-20, .hover-text-light-2-darker-20:hover { color: var(--ThemeColors-TextBackground-Light-2-Darker-20) !important }
+.text-accent-1-darker-20, .hover-text-accent-1-darker-20:hover { color: var(--ThemeColors-Accent-1-Darker-20) !important }
+.text-accent-2-darker-20, .hover-text-accent-2-darker-20:hover { color: var(--ThemeColors-Accent-2-Darker-20) !important }
+.text-accent-3-darker-20, .hover-text-accent-3-darker-20:hover { color: var(--ThemeColors-Accent-3-Darker-20) !important }
+.text-accent-4-darker-20, .hover-text-accent-4-darker-20:hover { color: var(--ThemeColors-Accent-4-Darker-20) !important }
+.text-accent-5-darker-20, .hover-text-accent-5-darker-20:hover { color: var(--ThemeColors-Accent-5-Darker-20) !important }
+.text-accent-6-darker-20, .hover-text-accent-6-darker-20:hover { color: var(--ThemeColors-Accent-6-Darker-20) !important }
+.text-accent-7-darker-20, .hover-text-accent-7-darker-20:hover { color: var(--ThemeColors-Accent-7-Darker-20) !important }
+
+.text-dark-1-darker-50, .hover-text-dark-1-darker-50:hover { color: var(--ThemeColors-TextBackground-Dark-1-Darker-50) !important }
+.text-dark-2-darker-50, .hover-text-dark-2-darker-50:hover { color: var(--ThemeColors-TextBackground-Dark-2-Darker-50) !important }
+.text-light-1-darker-50, .hover-text-light-1-darker-50:hover { color: var(--ThemeColors-TextBackground-Light-1-Darker-50) !important }
+.text-light-2-darker-50, .hover-text-light-2-darker-50:hover { color: var(--ThemeColors-TextBackground-Light-2-Darker-50) !important }
+.text-accent-1-darker-50, .hover-text-accent-1-darker-50:hover { color: var(--ThemeColors-Accent-1-Darker-50) !important }
+.text-accent-2-darker-50, .hover-text-accent-2-darker-50:hover { color: var(--ThemeColors-Accent-2-Darker-50) !important }
+.text-accent-3-darker-50, .hover-text-accent-3-darker-50:hover { color: var(--ThemeColors-Accent-3-Darker-50) !important }
+.text-accent-4-darker-50, .hover-text-accent-4-darker-50:hover { color: var(--ThemeColors-Accent-4-Darker-50) !important }
+.text-accent-5-darker-50, .hover-text-accent-5-darker-50:hover { color: var(--ThemeColors-Accent-5-Darker-50) !important }
+.text-accent-6-darker-50, .hover-text-accent-6-darker-50:hover { color: var(--ThemeColors-Accent-6-Darker-50) !important }
+.text-accent-7-darker-50, .hover-text-accent-7-darker-50:hover { color: var(--ThemeColors-Accent-7-Darker-50) !important }
+
+.text-dark-1-darker-80, .hover-text-dark-1-darker-80:hover { color: var(--ThemeColors-TextBackground-Dark-1-Darker-80) !important }
+.text-dark-2-darker-80, .hover-text-dark-2-darker-80:hover { color: var(--ThemeColors-TextBackground-Dark-2-Darker-80) !important }
+.text-light-1-darker-80, .hover-text-light-1-darker-80:hover { color: var(--ThemeColors-TextBackground-Light-1-Darker-80) !important }
+.text-light-2-darker-80, .hover-text-light-2-darker-80:hover { color: var(--ThemeColors-TextBackground-Light-2-Darker-80) !important }
+.text-accent-1-darker-80, .hover-text-accent-1-darker-80:hover { color: var(--ThemeColors-Accent-1-Darker-80) !important }
+.text-accent-2-darker-80, .hover-text-accent-2-darker-80:hover { color: var(--ThemeColors-Accent-2-Darker-80) !important }
+.text-accent-3-darker-80, .hover-text-accent-3-darker-80:hover { color: var(--ThemeColors-Accent-3-Darker-80) !important }
+.text-accent-4-darker-80, .hover-text-accent-4-darker-80:hover { color: var(--ThemeColors-Accent-4-Darker-80) !important }
+.text-accent-5-darker-80, .hover-text-accent-5-darker-80:hover { color: var(--ThemeColors-Accent-5-Darker-80) !important }
+.text-accent-6-darker-80, .hover-text-accent-6-darker-80:hover { color: var(--ThemeColors-Accent-6-Darker-80) !important }
+.text-accent-7-darker-80, .hover-text-accent-7-darker-80:hover { color: var(--ThemeColors-Accent-7-Darker-80) !important }
+
+.text-dark-1-lighter-20, .hover-text-dark-1-lighter-20:hover { color: var(--ThemeColors-TextBackground-Dark-1-Lighter-20) !important }
+.text-dark-2-lighter-20, .hover-text-dark-2-lighter-20:hover { color: var(--ThemeColors-TextBackground-Dark-2-Lighter-20) !important }
+.text-light-1-lighter-20, .hover-text-light-1-lighter-20:hover { color: var(--ThemeColors-TextBackground-Light-1-Lighter-20) !important }
+.text-light-2-lighter-20, .hover-text-light-2-lighter-20:hover { color: var(--ThemeColors-TextBackground-Light-2-Lighter-20) !important }
+.text-accent-1-lighter-20, .hover-text-accent-1-lighter-20:hover { color: var(--ThemeColors-Accent-1-Lighter-20) !important }
+.text-accent-2-lighter-20, .hover-text-accent-2-lighter-20:hover { color: var(--ThemeColors-Accent-2-Lighter-20) !important }
+.text-accent-3-lighter-20, .hover-text-accent-3-lighter-20:hover { color: var(--ThemeColors-Accent-3-Lighter-20) !important }
+.text-accent-4-lighter-20, .hover-text-accent-4-lighter-20:hover { color: var(--ThemeColors-Accent-4-Lighter-20) !important }
+.text-accent-5-lighter-20, .hover-text-accent-5-lighter-20:hover { color: var(--ThemeColors-Accent-5-Lighter-20) !important }
+.text-accent-6-lighter-20, .hover-text-accent-6-lighter-20:hover { color: var(--ThemeColors-Accent-6-Lighter-20) !important }
+.text-accent-7-lighter-20, .hover-text-accent-7-lighter-20:hover { color: var(--ThemeColors-Accent-7-Lighter-20) !important }
+
+.text-dark-1-lighter-50, .hover-text-dark-1-lighter-50:hover { color: var(--ThemeColors-TextBackground-Dark-1-Lighter-50) !important }
+.text-dark-2-lighter-50, .hover-text-dark-2-lighter-50:hover { color: var(--ThemeColors-TextBackground-Dark-2-Lighter-50) !important }
+.text-light-1-lighter-50, .hover-text-light-1-lighter-50:hover { color: var(--ThemeColors-TextBackground-Light-1-Lighter-50) !important }
+.text-light-2-lighter-50, .hover-text-light-2-lighter-50:hover { color: var(--ThemeColors-TextBackground-Light-2-Lighter-50) !important }
+.text-accent-1-lighter-50, .hover-text-accent-1-lighter-50:hover { color: var(--ThemeColors-Accent-1-Lighter-50) !important }
+.text-accent-2-lighter-50, .hover-text-accent-2-lighter-50:hover { color: var(--ThemeColors-Accent-2-Lighter-50) !important }
+.text-accent-3-lighter-50, .hover-text-accent-3-lighter-50:hover { color: var(--ThemeColors-Accent-3-Lighter-50) !important }
+.text-accent-4-lighter-50, .hover-text-accent-4-lighter-50:hover { color: var(--ThemeColors-Accent-4-Lighter-50) !important }
+.text-accent-5-lighter-50, .hover-text-accent-5-lighter-50:hover { color: var(--ThemeColors-Accent-5-Lighter-50) !important }
+.text-accent-6-lighter-50, .hover-text-accent-6-lighter-50:hover { color: var(--ThemeColors-Accent-6-Lighter-50) !important }
+.text-accent-7-lighter-50, .hover-text-accent-7-lighter-50:hover { color: var(--ThemeColors-Accent-7-Lighter-50) !important }
+
+.text-dark-1-lighter-80, .hover-text-dark-1-lighter-80:hover { color: var(--ThemeColors-TextBackground-Dark-1-Lighter-80) !important }
+.text-dark-2-lighter-80, .hover-text-dark-2-lighter-80:hover { color: var(--ThemeColors-TextBackground-Dark-2-Lighter-80) !important }
+.text-light-1-lighter-80, .hover-text-light-1-lighter-80:hover { color: var(--ThemeColors-TextBackground-Light-1-Lighter-80) !important }
+.text-light-2-lighter-80, .hover-text-light-2-lighter-80:hover { color: var(--ThemeColors-TextBackground-Light-2-Lighter-80) !important }
+.text-accent-1-lighter-80, .hover-text-accent-1-lighter-80:hover { color: var(--ThemeColors-Accent-1-Lighter-80) !important }
+.text-accent-2-lighter-80, .hover-text-accent-2-lighter-80:hover { color: var(--ThemeColors-Accent-2-Lighter-80) !important }
+.text-accent-3-lighter-80, .hover-text-accent-3-lighter-80:hover { color: var(--ThemeColors-Accent-3-Lighter-80) !important }
+.text-accent-4-lighter-80, .hover-text-accent-4-lighter-80:hover { color: var(--ThemeColors-Accent-4-Lighter-80) !important }
+.text-accent-5-lighter-80, .hover-text-accent-5-lighter-80:hover { color: var(--ThemeColors-Accent-5-Lighter-80) !important }
+.text-accent-6-lighter-80, .hover-text-accent-6-lighter-80:hover { color: var(--ThemeColors-Accent-6-Lighter-80) !important }
+.text-accent-7-lighter-80, .hover-text-accent-7-lighter-80:hover { color: var(--ThemeColors-Accent-7-Lighter-80) !important }
+
+
+/*Create Theme Color Border classes*/
+.border-dark-1 { border-color: var(--ThemeColors-TextBackground-Dark-1) !important }
+.border-dark-2 { border-color: var(--ThemeColors-TextBackground-Dark-2) !important }
+.border-light-1 { border-color: var(--ThemeColors-TextBackground-Light-1) !important }
+.border-light-2 { border-color: var(--ThemeColors-TextBackground-Light-2) !important }
+.border-accent-1 { border-color: var(--ThemeColors-Accent-1) !important }
+.border-accent-2 { border-color: var(--ThemeColors-Accent-2) !important }
+.border-accent-3 { border-color: var(--ThemeColors-Accent-3) !important }
+.border-accent-4 { border-color: var(--ThemeColors-Accent-4) !important }
+.border-accent-5 { border-color: var(--ThemeColors-Accent-5) !important }
+.border-accent-6 { border-color: var(--ThemeColors-Accent-6) !important }
+.border-accent-7 { border-color: var(--ThemeColors-Accent-7) !important }
+
+.border-dark-1-trans-20 { border-color: var(--ThemeColors-TextBackground-Dark-1-Trans-20) !important }
+.border-dark-2-trans-20 { border-color: var(--ThemeColors-TextBackground-Dark-2-Trans-20) !important }
+.border-light-1-trans-20 { border-color: var(--ThemeColors-TextBackground-Light-1-Trans-20) !important }
+.border-light-2-trans-20 { border-color: var(--ThemeColors-TextBackground-Light-2-Trans-20) !important }
+.border-accent-1-trans-20 { border-color: var(--ThemeColors-Accent-1-Trans-20) !important }
+.border-accent-2-trans-20 { border-color: var(--ThemeColors-Accent-2-Trans-20) !important }
+.border-accent-3-trans-20 { border-color: var(--ThemeColors-Accent-3-Trans-20) !important }
+.border-accent-4-trans-20 { border-color: var(--ThemeColors-Accent-4-Trans-20) !important }
+.border-accent-5-trans-20 { border-color: var(--ThemeColors-Accent-5-Trans-20) !important }
+.border-accent-6-trans-20 { border-color: var(--ThemeColors-Accent-6-Trans-20) !important }
+.border-accent-7-trans-20 { border-color: var(--ThemeColors-Accent-7-Trans-20) !important }
+
+.border-dark-1-trans-50 { border-color: var(--ThemeColors-TextBackground-Dark-1-Trans-50) !important }
+.border-dark-2-trans-50 { border-color: var(--ThemeColors-TextBackground-Dark-2-Trans-50) !important }
+.border-light-1-trans-50 { border-color: var(--ThemeColors-TextBackground-Light-1-Trans-50) !important }
+.border-light-2-trans-50 { border-color: var(--ThemeColors-TextBackground-Light-2-Trans-50) !important }
+.border-accent-1-trans-50 { border-color: var(--ThemeColors-Accent-1-Trans-50) !important }
+.border-accent-2-trans-50 { border-color: var(--ThemeColors-Accent-2-Trans-50) !important }
+.border-accent-3-trans-50 { border-color: var(--ThemeColors-Accent-3-Trans-50) !important }
+.border-accent-4-trans-50 { border-color: var(--ThemeColors-Accent-4-Trans-50) !important }
+.border-accent-5-trans-50 { border-color: var(--ThemeColors-Accent-5-Trans-50) !important }
+.border-accent-6-trans-50 { border-color: var(--ThemeColors-Accent-6-Trans-50) !important }
+.border-accent-7-trans-50 { border-color: var(--ThemeColors-Accent-7-Trans-50) !important }
+
+.border-dark-1-trans-80 { border-color: var(--ThemeColors-TextBackground-Dark-1-Trans-80) !important }
+.border-dark-2-trans-80 { border-color: var(--ThemeColors-TextBackground-Dark-2-Trans-80) !important }
+.border-light-1-trans-80 { border-color: var(--ThemeColors-TextBackground-Light-1-Trans-80) !important }
+.border-light-2-trans-80 { border-color: var(--ThemeColors-TextBackground-Light-2-Trans-80) !important }
+.border-accent-1-trans-80 { border-color: var(--ThemeColors-Accent-1-Trans-80) !important }
+.border-accent-2-trans-80 { border-color: var(--ThemeColors-Accent-2-Trans-80) !important }
+.border-accent-3-trans-80 { border-color: var(--ThemeColors-Accent-3-Trans-80) !important }
+.border-accent-4-trans-80 { border-color: var(--ThemeColors-Accent-4-Trans-80) !important }
+.border-accent-5-trans-80 { border-color: var(--ThemeColors-Accent-5-Trans-80) !important }
+.border-accent-6-trans-80 { border-color: var(--ThemeColors-Accent-6-Trans-80) !important }
+.border-accent-7-trans-80 { border-color: var(--ThemeColors-Accent-7-Trans-80) !important }
+
+.border-dark-1-darker-20 { border-color: var(--ThemeColors-TextBackground-Dark-1-Darker-20) !important }
+.border-dark-2-darker-20 { border-color: var(--ThemeColors-TextBackground-Dark-2-Darker-20) !important }
+.border-light-1-darker-20 { border-color: var(--ThemeColors-TextBackground-Light-1-Darker-20) !important }
+.border-light-2-darker-20 { border-color: var(--ThemeColors-TextBackground-Light-2-Darker-20) !important }
+.border-accent-1-darker-20 { border-color: var(--ThemeColors-Accent-1-Darker-20) !important }
+.border-accent-2-darker-20 { border-color: var(--ThemeColors-Accent-2-Darker-20) !important }
+.border-accent-3-darker-20 { border-color: var(--ThemeColors-Accent-3-Darker-20) !important }
+.border-accent-4-darker-20 { border-color: var(--ThemeColors-Accent-4-Darker-20) !important }
+.border-accent-5-darker-20 { border-color: var(--ThemeColors-Accent-5-Darker-20) !important }
+.border-accent-6-darker-20 { border-color: var(--ThemeColors-Accent-6-Darker-20) !important }
+.border-accent-7-darker-20 { border-color: var(--ThemeColors-Accent-7-Darker-20) !important }
+
+.border-dark-1-darker-50 { border-color: var(--ThemeColors-TextBackground-Dark-1-Darker-50) !important }
+.border-dark-2-darker-50 { border-color: var(--ThemeColors-TextBackground-Dark-2-Darker-50) !important }
+.border-light-1-darker-50 { border-color: var(--ThemeColors-TextBackground-Light-1-Darker-50) !important }
+.border-light-2-darker-50 { border-color: var(--ThemeColors-TextBackground-Light-2-Darker-50) !important }
+.border-accent-1-darker-50 { border-color: var(--ThemeColors-Accent-1-Darker-50) !important }
+.border-accent-2-darker-50 { border-color: var(--ThemeColors-Accent-2-Darker-50) !important }
+.border-accent-3-darker-50 { border-color: var(--ThemeColors-Accent-3-Darker-50) !important }
+.border-accent-4-darker-50 { border-color: var(--ThemeColors-Accent-4-Darker-50) !important }
+.border-accent-5-darker-50 { border-color: var(--ThemeColors-Accent-5-Darker-50) !important }
+.border-accent-6-darker-50 { border-color: var(--ThemeColors-Accent-6-Darker-50) !important }
+.border-accent-7-darker-50 { border-color: var(--ThemeColors-Accent-7-Darker-50) !important }
+
+.border-dark-1-darker-80 { border-color: var(--ThemeColors-TextBackground-Dark-1-Darker-80) !important }
+.border-dark-2-darker-80 { border-color: var(--ThemeColors-TextBackground-Dark-2-Darker-80) !important }
+.border-light-1-darker-80 { border-color: var(--ThemeColors-TextBackground-Light-1-Darker-80) !important }
+.border-light-2-darker-80 { border-color: var(--ThemeColors-TextBackground-Light-2-Darker-80) !important }
+.border-accent-1-darker-80 { border-color: var(--ThemeColors-Accent-1-Darker-80) !important }
+.border-accent-2-darker-80 { border-color: var(--ThemeColors-Accent-2-Darker-80) !important }
+.border-accent-3-darker-80 { border-color: var(--ThemeColors-Accent-3-Darker-80) !important }
+.border-accent-4-darker-80 { border-color: var(--ThemeColors-Accent-4-Darker-80) !important }
+.border-accent-5-darker-80 { border-color: var(--ThemeColors-Accent-5-Darker-80) !important }
+.border-accent-6-darker-80 { border-color: var(--ThemeColors-Accent-6-Darker-80) !important }
+.border-accent-7-darker-80 { border-color: var(--ThemeColors-Accent-7-Darker-80) !important }
+
+.border-dark-1-lighter-20 { border-color: var(--ThemeColors-TextBackground-Dark-1-Lighter-20) !important }
+.border-dark-2-lighter-20 { border-color: var(--ThemeColors-TextBackground-Dark-2-Lighter-20) !important }
+.border-light-1-lighter-20 { border-color: var(--ThemeColors-TextBackground-Light-1-Lighter-20) !important }
+.border-light-2-lighter-20 { border-color: var(--ThemeColors-TextBackground-Light-2-Lighter-20) !important }
+.border-accent-1-lighter-20 { border-color: var(--ThemeColors-Accent-1-Lighter-20) !important }
+.border-accent-2-lighter-20 { border-color: var(--ThemeColors-Accent-2-Lighter-20) !important }
+.border-accent-3-lighter-20 { border-color: var(--ThemeColors-Accent-3-Lighter-20) !important }
+.border-accent-4-lighter-20 { border-color: var(--ThemeColors-Accent-4-Lighter-20) !important }
+.border-accent-5-lighter-20 { border-color: var(--ThemeColors-Accent-5-Lighter-20) !important }
+.border-accent-6-lighter-20 { border-color: var(--ThemeColors-Accent-6-Lighter-20) !important }
+.border-accent-7-lighter-20 { border-color: var(--ThemeColors-Accent-7-Lighter-20) !important }
+
+.border-dark-1-lighter-50 { border-color: var(--ThemeColors-TextBackground-Dark-1-Lighter-50) !important }
+.border-dark-2-lighter-50 { border-color: var(--ThemeColors-TextBackground-Dark-2-Lighter-50) !important }
+.border-light-1-lighter-50 { border-color: var(--ThemeColors-TextBackground-Light-1-Lighter-50) !important }
+.border-light-2-lighter-50 { border-color: var(--ThemeColors-TextBackground-Light-2-Lighter-50) !important }
+.border-accent-1-lighter-50 { border-color: var(--ThemeColors-Accent-1-Lighter-50) !important }
+.border-accent-2-lighter-50 { border-color: var(--ThemeColors-Accent-2-Lighter-50) !important }
+.border-accent-3-lighter-50 { border-color: var(--ThemeColors-Accent-3-Lighter-50) !important }
+.border-accent-4-lighter-50 { border-color: var(--ThemeColors-Accent-4-Lighter-50) !important }
+.border-accent-5-lighter-50 { border-color: var(--ThemeColors-Accent-5-Lighter-50) !important }
+.border-accent-6-lighter-50 { border-color: var(--ThemeColors-Accent-6-Lighter-50) !important }
+.border-accent-7-lighter-50 { border-color: var(--ThemeColors-Accent-7-Lighter-50) !important }
+
+.border-dark-1-lighter-80 { border-color: var(--ThemeColors-TextBackground-Dark-1-Lighter-80) !important }
+.border-dark-2-lighter-80 { border-color: var(--ThemeColors-TextBackground-Dark-2-Lighter-80) !important }
+.border-light-1-lighter-80 { border-color: var(--ThemeColors-TextBackground-Light-1-Lighter-80) !important }
+.border-light-2-lighter-80 { border-color: var(--ThemeColors-TextBackground-Light-2-Lighter-80) !important }
+.border-accent-1-lighter-80 { border-color: var(--ThemeColors-Accent-1-Lighter-80) !important }
+.border-accent-2-lighter-80 { border-color: var(--ThemeColors-Accent-2-Lighter-80) !important }
+.border-accent-3-lighter-80 { border-color: var(--ThemeColors-Accent-3-Lighter-80) !important }
+.border-accent-4-lighter-80 { border-color: var(--ThemeColors-Accent-4-Lighter-80) !important }
+.border-accent-5-lighter-80 { border-color: var(--ThemeColors-Accent-5-Lighter-80) !important }
+.border-accent-6-lighter-80 { border-color: var(--ThemeColors-Accent-6-Lighter-80) !important }
+.border-accent-7-lighter-80 { border-color: var(--ThemeColors-Accent-7-Lighter-80) !important }
+
+
+/* Create the normal hyperlink format */
+.theme-hyperlink { color: var(--ThemeColors-Hyperlink) }
+.theme-hyperlink:hover { color: var(--ThemeColors-Hyperlink-Trans-20) }
+.theme-hyperlink:visited { color: var(--ThemeColors-FollowedHyperlink) }

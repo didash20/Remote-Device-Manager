@@ -1,0 +1,339 @@
+<!-- Header -->
+<header class="w3-container" style="padding-top:22px">
+  <h1><b><i class="fa fa-bar-chart"></i> Statistics</b></h1>
+</header>
+
+<div class="w3-container">
+  <div class="w3-card w3-padding-top background-light-2-lighter-80">
+    <header id="overview" class="w3-container w3-dropdown-click w3-bar w3-hover-none" onclick="openContent('overview')">
+      <h2>
+        <b>
+          <i class="fa fa-globe"></i>
+          Overview
+          <span class="w3-right"><i class="fa fa-chevron-down"></i></span>
+        </b>
+      </h2>
+    </header>
+    <div id="content-overview" class="background-light-2-lighter-50" style="display: none;">
+
+      <div class="w3-padding w3-border-top border-light-2">
+        <header id="overview-alltime" onclick="openContent('overview-alltime')"
+          class="w3-dropdown-click w3-bar w3-hover-none">
+          <h3 style="margin: 0 40px;">
+            <b>
+              <i class="fa fa-clock-o"></i>
+              All Time
+              <span class="w3-right"><i class="fa fa-chevron-down"></i></span>
+            </b>
+          </h3>
+        </header>
+        <div id="content-overview-alltime" class="w3-row-padding w3-margin-top w3-margin-bottom text-light-1"
+          style="display: none;">
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-2">
+              <div class="w3-left"><i class="fa fa-wrench w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= resources?resources.length:0 %> </h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Resources</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-3">
+              <div class="w3-left"><i class="fa fa-calendar w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= schedules?schedules.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Schedules</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-4">
+              <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1">53</h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Visits</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-5">
+              <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= users?users.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Users</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-padding w3-border-top border-light-2">
+        <header id="overview-thismonth" onclick="openContent('overview-thismonth')"
+          class=" w3-dropdown-click w3-bar w3-hover-none">
+          <h3 style="margin: 0 40px;">
+            <b>
+              <i class="fa fa-calendar-plus-o"></i>
+              This Month
+              <span class="w3-right"><i class="fa fa-chevron-down"></i></span>
+            </b>
+          </h3>
+        </header>
+        <div id="content-overview-thismonth" class="w3-row-padding w3-margin-top w3-margin-bottom text-light-1"
+          style="display: none;">
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-2">
+              <div class="w3-left"><i class="fa fa-wrench w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= resources?resources.thismonth.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Resources</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-3">
+              <div class="w3-left"><i class="fa fa-calendar w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= schedules?schedules.thismonth.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Schedules</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-4">
+              <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1">13</h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Visits</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-5">
+              <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= users?users.thismonth.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Users</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w3-padding w3-border-top border-light-2">
+        <header id="overview-thisweek" onclick="openContent('overview-thisweek')"
+          class=" w3-dropdown-click w3-bar w3-hover-none">
+          <h3 style="margin: 0 40px;">
+            <b>
+              <i class="fa fa-line-chart"></i>
+              This Week
+              <span class="w3-right"><i class="fa fa-chevron-down"></i></span>
+            </b>
+          </h3>
+        </header>
+        <div id="content-overview-thisweek" class="w3-row-padding w3-margin-top w3-margin-bottom text-light-1"
+          style="display: none;">
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-2">
+              <div class="w3-left"><i class="fa fa-wrench w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= resources?resources.thisweek.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Resources</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-3">
+              <div class="w3-left"><i class="fa fa-calendar w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= schedules?schedules.thisweek.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Schedules</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-4">
+              <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1">5</h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Visits</span>
+            </div>
+          </div>
+          <div class="w3-quarter">
+            <div class="w3-container w3-padding-16 background-accent-5">
+              <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+              <div class="w3-right ">
+                <h2 class="text-light-1"><%= users?users.thisweek.length:0 %></h2>
+              </div>
+              <div class="w3-clear"></div>
+              <span class="w3-xxlarge">Users</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <header id="sresources" class="w3-container w3-dropdown-click w3-bar w3-hover-none  w3-border-top border-light-2"
+      onclick="openContent('sresources')">
+      <h2>
+        <b>
+          <i class="fa fa-wrench"></i>
+          Resources
+          <span class="w3-right"><i class="fa fa-chevron-down"></i></span>
+        </b>
+      </h2>
+    </header>
+    <div id="content-sresources" class="background-light-2-lighter-50" style="display: none;">
+      <% if (resources && resources.length > 0) { %>
+      <% resources.sort( (rsrc1,rsrc2) =>{
+          return rsrc2.datesbooked.timesbooked - rsrc1.datesbooked.timesbooked;
+        }); %>
+      <% const instruments = [], resourcesbyinstrument = [];%>
+      <% resources.forEach( resource => { %>
+      <% const instrumentindex = instruments.indexOf(resource.instrument) %>
+      <% if (instrumentindex >= 0) { %>
+      <% resourcesbyinstrument[instrumentindex].push(resource) %>
+      <% } else { %>
+      <% instruments.push(resource.instrument) %>
+      <% resourcesbyinstrument.push([resource]) %>
+      <% } %>
+      <% }) %>
+
+      <% for( let index = 0; index < instruments.length; index += 2 ) { %>
+      <div class="w3-half">
+        <div class="w3-container w3-padding-16">
+          <h2><%= instruments[index] %> Most Scheduled</h2>
+          <table class="resource-table">
+            <tr>
+              <th class="w3-xlarge" style="width: 90px;">Resource</th>
+              <th class="w3-xlarge"></th>
+              <th colspan="3" class="w3-center w3-hide-small"">
+                        Scheduled for (this)
+                        <div class=" w3-row w3- w3-center w3-large">
+                <div class="w3-third">All Time</div>
+                <div class="w3-third">Month</div>
+                <div class="w3-third">Week</div>
+              </th>
+            </tr>
+            <% for( let rindex = 0; rindex < resourcesbyinstrument[index].length && rindex < 3; rindex++ ) { %>
+            <% const resource = resourcesbyinstrument[index][rindex] %>
+            <tr class="resource" id="<%= resource.name %>">
+              <td>
+                <img src="<%= resource.imagepath %>" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+              </td>
+              <td>
+                <div style="overflow-x: auto;">
+                  <span class="resource-table-name"><%= resource.name %><br>
+                    <span class="w3-small">by <%= resource.creator %></span></span>
+                </div>
+              </td>
+              <td class="w3-xlarge w3-hide-small w3-center"><%= resource.datesbooked.timesbooked %></td>
+              <td class="w3-xlarge w3-hide-small w3-center"><%= resource.bookedtimes.thismonth %></td>
+              <td class="w3-xlarge w3-hide-small w3-center"><%= resource.bookedtimes.thisweek %></td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+      </div>
+      <% if (instruments[index+1]) { %>
+        <div class="w3-half">
+          <div class="w3-container w3-padding-16">
+            <h2><%= instruments[index+1] %> Most Scheduled</h2>
+            <table class="resource-table">
+              <tr>
+                <th class="w3-xlarge" style="width: 90px;">Resource</th>
+                <th class="w3-xlarge"></th>
+                <th colspan="3" class="w3-center w3-hide-small"">
+                          Scheduled for (this)
+                          <div class=" w3-row w3- w3-center w3-large">
+                  <div class="w3-third">All Time</div>
+                  <div class="w3-third">Month</div>
+                  <div class="w3-third">Week</div>
+                </th>
+              </tr>
+              <% for( let rindex = 0; rindex < resourcesbyinstrument[index+1].length && rindex < 3; rindex++ ) { %>
+              <% const resource = resourcesbyinstrument[index+1][rindex] %>
+              <tr class="resource" id="<%= resource.name %>">
+                <td>
+                  <img src="<%= resource.imagepath %>" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+                </td>
+                <td>
+                  <div style="overflow-x: auto;">
+                    <span class="resource-table-name"><%= resource.name %><br>
+                      <span class="w3-small">by <%= resource.creator %></span></span>
+                  </div>
+                </td>
+                <td class="w3-xlarge w3-hide-small w3-center"><%= resource.datesbooked.timesbooked %></td>
+                <td class="w3-xlarge w3-hide-small w3-center"><%= resource.bookedtimes.thismonth %></td>
+                <td class="w3-xlarge w3-hide-small w3-center"><%= resource.bookedtimes.thisweek %></td>
+              </tr>
+              <% } %>
+            </table>
+          </div>
+        </div>
+      <% } %>
+      <% } %>
+      <% } else { %>
+      <div class="w3-container">
+        <h3>No resources were found</h3>
+      </div>
+      <% } %>
+    </div>
+
+    <header id="susers" class="w3-container w3-dropdown-click w3-bar w3-hover-none  w3-border-top border-light-2"
+      onclick="openContent('susers'); location.pathname = '/moderator/users'">
+      <h2>
+        <b>
+          <i class="fa fa-users"></i>
+          Users
+          <span class="w3-right"><i class="fa fa-chevron-down"></i></span>
+        </b>
+      </h2>
+    </header>
+    <div id="content-susers" class="background-light-2-lighter-50" style="display: none;">
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const openContent = function (id) {
+    const head = document.getElementById(id);
+    const arrow = head.getElementsByTagName('span')[0];
+    const content = document.getElementById('content-' + id);
+
+    arrow.innerHTML = '<i class="fa fa-chevron-up"></i>';
+    if (content)
+      content.style.display = 'block';
+    head.onclick = () => {
+      closeContent(id);
+    }
+  }
+
+  const closeContent = function (id) {
+    const head = document.getElementById(id);
+    const arrow = head.getElementsByTagName('span')[0];
+    const content = document.getElementById('content-' + id);
+
+    arrow.innerHTML = '<i class="fa fa-chevron-down"></i>';
+    if (content)
+      content.style.display = 'none';
+    head.onclick = () => {
+      openContent(id);
+    }
+  }
+</script>

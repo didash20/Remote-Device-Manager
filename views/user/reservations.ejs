@@ -1,0 +1,51 @@
+<!-- Header -->
+<header class="w3-container" style="padding-top:22px">
+    <h2><b><i class="fa fa-calendar"></i>  My Reservations</b></h2>
+</header>
+
+<% if (schedules && schedules.length > 0) { %>
+    <div class="w3-container">
+        <table class="resource-table">
+            <tr>
+                <th class="w3-xlarge" style="width: 100px;">Resource</th>
+                <th class="w3-xlarge resource-table-name"></th>
+                <th class="w3-xlarge w3-hide-small" style="width: 100px;">Date</th>
+                <th class="w3-xlarge w3-hide-small" style="width: 100px;">Time</th>
+                <th class="w3-xlarge w3-hide-small">Path</th>
+                <th style="width: 80px;"></th>
+            </tr>
+            <% schedules.forEach( schedule => { %>
+                <tr class="resource" id="<%= schedule.resource.name %>" >
+                    <td>
+                        <img src="<%= schedule.resource.imagepath %>" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+                    </td>
+                    <td style="width: 50%; max-width: 200px;">
+                        <span><%= schedule.resource.name %><br> 
+                        <span class="w3-small">by <%= schedule.resource.creator %></span></span>
+                    </td>
+                    <%  const dateAvailable =  new Date(schedule.dates.dateAvailable) 
+                        const dateAvailableFormat = `${("0" + (dateAvailable.getMonth()+1)).slice(-2)}/${("0" + dateAvailable.getDate()).slice(-2)}/${dateAvailable.getFullYear()}`;
+                        const timeAvailableFormat = `${dateAvailable.getHours()}:${("0" + dateAvailable.getMinutes()).slice(-2)}:${("0" + dateAvailable.getSeconds()).slice(-2)}`;
+                    %>
+                    <td class="w3-hide-small"><%= dateAvailableFormat %></td>
+                    <td class="w3-hide-small"><%= timeAvailableFormat %></td>
+                    <td class="w3-hide-small" style="overflow-x: auto;"><%= schedule.url.completeURL %></td>
+                    <td class="w3-xlarge">
+                        <form id="clearReservation-<%= schedule.resource.name %>" action="/clearReservation" method="post" style="display: none;">
+                            <input type="text" name="resourceName" value="<%= schedule.resource.name %>">
+                            <input type="text" name="date" value="<%= schedule.dates.dateAvailable %>">
+                            <input type="text" name="schedule_id" value="<%= schedule._id %>">
+                        </form>
+                        <a href="javascript:{}" onclick="if(confirm('Are you sure you want to delete this Reservation?\nResource: <%= schedule.resource.name %>\nDate: <%= dateAvailableFormat %>\nTime: <%= timeAvailableFormat %>'))document.getElementById('clearReservation-<%= schedule.resource.name %>').submit();"><i class="fa fa-trash fa-fw hover-text-dark-1-trans-50" style="float:right;"></i></a>
+                        <a href="<%= schedule.url.pathname %>" target="_blank"><i class="schedule fa fa-play-circle fa-fw hover-text-dark-1-trans-50" style="float:right;"></i></a>
+                    </td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+<% } else { %>
+    <div class="w3-container">
+        <h3>No Reservations were found</h3>
+        <p>Go <a href="resources">here</a> to choose a resource and schedule a reservation.</p>
+    </div>
+<% } %>

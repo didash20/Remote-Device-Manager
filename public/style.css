@@ -1,0 +1,452 @@
+html,body,h1,h2,h3,h4,h5 {
+    font-family: "Raleway", sans-serif;
+    color: hsl(149.6,100%,11%);
+    color: var(--ThemeColors-TextBackground-Dark-1-Darker-20);
+}
+
+.background-dark-1 {
+    color: hsl(149.6,100%,13.7%);
+    background: var(--ThemeColors-TextBackground-Dark-1);
+}
+
+*:focus{
+    border: none;
+    outline: none;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+}
+*::-webkit-scrollbar-track{
+    background: #0000;
+}
+*::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    background: hsl(149.6,100%,13.7%);
+    background: var(--ThemeColors-TextBackground-Dark-1);
+}
+
+.top-container {
+    position: fixed;
+    display: table;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    top: 0;
+    background: hsl(158.1,100%,36%);
+    background: var(--ThemeColors-TextBackground-Dark-2);
+    border-bottom: 1px solid hsl(158.1,100%,7.2%);
+    border-bottom-color: var(--ThemeColors-TextBackground-Dark-2-Darker-80);
+    font-size: 24px;
+    color: hsl(149.6,100%,11%);
+    color: var(--ThemeColors-TextBackground-Dark-1-Darker-20);
+}
+
+.top-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.top-container .menu-button {
+    float: left;
+    padding: 8px 16px;
+    margin: 0;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: hsl(158.1,100%,36%);
+    background-color: var(--ThemeColors-TextBackground-Dark-2);
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    font: inherit;
+    color: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+.top-container .menu-button::after {
+    content: "  Menu";
+}
+
+.top-container .menu-button:hover {
+    opacity: 0.5;
+}
+
+.top-container .search-container {
+    display: table;
+    height: 40px;
+    margin: auto;
+    font-size: 17px;
+    background: var(--ThemeColors-TextBackground-Light-1);
+}
+
+.top-container .search-container input[type=text] {
+    height: 100%;
+    width: 30vw;
+    max-width: 300px;
+    padding: 6px;
+    margin: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.top-container .search-container button {
+    float: right;
+    height: 100%;
+    padding: 6px 10px;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+.top-container .search-container button:hover {
+    opacity: 0.5;
+}
+
+.sidebar {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 300px;
+    z-index: 3;
+    top: 0;
+    overflow: auto;
+    background: hsl(149.6,100%,13.7%);
+    background: var(--ThemeColors-TextBackground-Dark-1);
+    color: hsl(107.3,20.8%,82.4%);
+    color: var(--ThemeColors-TextBackground-Light-1-Trans-20);
+    border-right: 1px solid hsl(149.6,100%,31%);
+    border-right-color: var(--ThemeColors-TextBackground-Dark-1-Lighter-20);
+    box-shadow: 4px 0 5px 0 rgba(0,0,0,0.3), 
+                4px 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.account-menu-button {
+    display: block;
+    float: left;
+    width: auto;
+    padding: 8px 16px;
+    overflow: hidden;
+    border: none;
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+    white-space: normal;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.account-menu-button-close {
+    display: block;
+    float: right;
+    width: auto;
+    padding: 8px 16px 0px 0px;
+    overflow: hidden;
+    border: none;
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+    font-size: 18px;
+    white-space: normal;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.account-menu-button:hover, .account-menu-button-close:hover{
+    opacity: 0.5;
+}
+
+.sidebar-button {
+    display: block;
+    float: none;
+    width: 100%;
+    padding: 8px 16px;
+    overflow: hidden;
+    background-color: inherit;
+    border: none;
+    text-align: left;
+    white-space: normal;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    outline: 0;
+    user-select: none;
+    cursor: pointer;
+}
+
+.sidebar-button:hover {
+    background-color: hsl(149.6,100%,20%);
+    background-color: var(--ThemeColors-TextBackground-Dark-2-Trans-80);
+}
+
+.sidebar .active {
+    background-color: hsl(149.6,100%,31%);
+    background-color: var(--ThemeColors-TextBackground-Dark-1-Lighter-20);
+}
+
+.sidebar-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    animation: opac 0.8s;
+    cursor: pointer;
+}
+
+.main,#main{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left:300px;
+    padding-top:60px;
+    overflow: auto;
+    transition: padding-left .4s;
+    background-color: hsl(107.3,20.8%,96.5%);
+    background-color: var(--ThemeColors-TextBackground-Light-1);
+}
+
+.main .page-content {
+    min-height: calc(100% - 210px);
+}
+
+.resource-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.resource-table tr{
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,0.18), 
+                0px 2px 10px 0 rgba(0,0,0,0.15);
+    height: 50px;
+}
+
+.resource-table tr:first-child {
+    background-color: hsl(107.3,20.8%,82.4%);
+    background-color: var(--ThemeColors-TextBackground-Light-2);
+}
+.resource-table tr:nth-child(odd) {
+    background-color: hsl(107.3,20.8%,85.92%);
+    background-color: var(--ThemeColors-TextBackground-Light-2-Lighter-20);
+}
+.resource-table tr:nth-child(even) {
+    background-color: hsl(107.3,20.8%,65.92%);
+    background-color: var(--ThemeColors-TextBackground-Light-2-Darker-20);
+}
+
+.resource-table td, .resource-table th{
+    display: table-cell;
+    padding: 8px 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+.resource-table td:first-child, .resource-table th:first-child{
+    padding-left: 16px;
+}
+
+.resource-table-name {
+    width: 200px;
+}
+
+.footer-container {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    padding: 16px;
+    background-color: hsl(107.3,20.8%,82.4%);
+    background-color: var(--ThemeColors-TextBackground-Light-2);
+}
+
+.slogan {
+    color: hsl(158.1,100%,36%);
+    color: var(--ThemeColors-TextBackground-Dark-1);
+    font-family: 'FinancierDisplay';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+}
+  
+.signupbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.modal button:hover {
+    opacity: 0.8;
+}
+  
+  /* Extra styles for the cancel button */
+.modal .cancelbtn {
+    float: left;
+    padding: 10px 18px;
+    margin: 8px 0;
+    width: 100px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+  
+.modal .container {
+    padding: 16px;
+}
+  
+.modal .bottomcontainer {
+    display: table;
+    padding: 16px;
+    width: 100%;
+    text-align: right;
+    background-color:#f1f1f1;
+}
+  
+.modal .bottomcontainer .extra {
+    display: table-cell;
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    margin: 40px auto;
+    background-color: #fefefe;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+  
+/* Add Zoom Animation */
+.animatezoom {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@media (min-width: 993px){
+    .sidebar {
+        display: block !important;
+        animation:  none;
+    }
+    .sidebar-overlay {
+        display: none !important;
+    }
+    .button-cell {
+        width: 20%;
+    }
+}
+@media (max-width: 992px){
+    .sidebar {
+        display: none;
+        animation:  animateleft 0.4s;
+    }
+    .main{
+        padding-left:0!important;
+        padding-right:0!important
+    }
+    .auto{max-width:100%}
+}
+@media (max-width: 600px){
+    .top-container .menu-button::after {
+        content: "";
+    }
+    .resource-table-name {
+        width: 30vw;
+        font-size: 4.5vw;
+    }
+    .resource-table-name span{
+        font-size: 3.5vw !important;
+    }
+}
+@media screen and (max-width: 300px) {
+    span.extra {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+@keyframes animateleft{
+    from{left:-300px;opacity:0} 
+    to{left:0;opacity:1}
+}
+
+@keyframes opac{
+    from{opacity:0} 
+    to{opacity:1}
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}

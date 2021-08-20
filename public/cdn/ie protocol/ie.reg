@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\iehttp]
+@="URL:Open with IE Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\iehttp\DefaultIcon]
+@="\"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe,1\""
+
+[HKEY_CLASSES_ROOT\iehttp\shell]
+[HKEY_CLASSES_ROOT\iehttp\shell\open]
+[HKEY_CLASSES_ROOT\iehttp\shell\open\command]
+@="cmd /V /C \"set URL=%1&& set URL=!URL:iehttp=http!&&cmd /c \"\"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe\"\" !URL!\""

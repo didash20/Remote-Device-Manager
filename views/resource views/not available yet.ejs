@@ -1,0 +1,23 @@
+<div class="w3-container">
+    <div class="w3-center">
+        <h1>Not available yet</h1>
+        <p>The scheduled resource you are trying to reach is not available yet. <br><br>
+        Try again in: <br><span id="time"></span></p>
+    </div>
+</div>
+
+<script>
+    const dates = <%- dates %>;
+    setInterval(function(){
+        let timedif = new Date(dates.dateAvailable);
+        timedif -= new Date();
+        if(timedif>=0)
+            document.getElementById("time").innerText = 
+                Math.floor(timedif/(24*3600*1000)) + ' days ' +
+                Math.floor(timedif/(3600*1000))%(24) + ' hours ' +
+                Math.floor(timedif/(60*1000))%(60) + ' mins ' +
+                Math.floor(timedif/(1000))%(60) + ' secs ';
+        else
+            location.reload();
+    },1000);
+</script>

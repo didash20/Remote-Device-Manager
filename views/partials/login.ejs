@@ -1,0 +1,94 @@
+<div id="login" class="modal">
+  <form name="login" class="modal-content animatezoom">
+    <div class="container">
+      <h1>Log in</h1>
+      <p>Please fill in this form to log in into your account.</p>
+      <hr>
+      <label for="uname"><b>Username <span class="uname w3-small" style="color: red">*</span></b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password <span class="psw w3-small" style="color: red">*</span></b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+      <button type="submit" class="signupbtn">Login</button>
+    </div>
+
+    <div class="bottomcontainer">
+      <button type="button" onclick="document.getElementById('login').style.display='none';" class="cancelbtn">Cancel</button>
+      <div class="extra">
+        <span>Don't have an account? <a href="#" onclick="document.getElementById('login').style.display='none'; document.getElementById('signup').style.display='block';">Sign up</a></span>
+        <!--br><span>Forgot <a href="#">password</a>?</span-->
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="signup" class="modal">
+  <form name="signup" class="modal-content animatezoom">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+
+    
+      <label for="uname"><b>Username <span class="uname w3-small" style="color: red">*</span></b></label>
+      <input type="text" placeholder="Enter Username" name="uname" pattern="^[A-za-z][A-za-z0-9_-]{4,32}$" required
+      title="Username must be alphanumerical, start with a letter and be between 5-32 characters">
+  
+      <label for="email"><b>Email <span class="email w3-small" style="color: red">*</span></b></label>
+      <input type="email" placeholder="Enter Email" name="email" required title="Fill this field">
+      
+      <table style="width: 100%;">
+        <tr>
+          <td style="width: 48%;">
+            <label for="fname"><b>First Name <span class="fname w3-small" style="color: red">*</span></b></label>
+            <input type="text" placeholder="Enter your First Name" name="fname" required>
+          </td>
+          <td style="width: 2%;"></td>
+          <td style="width: 48%;">
+            <label for="lname"><b>Last Name <span class="lname w3-small" style="color: red">*</span></b></label>
+            <input type="text" placeholder="Enter your Last Name" name="lname" required>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 48%;">
+            <label for="institution"><b>Institution <span class="institution w3-small" style="color: red"></span></b></label>
+            <input type="text" placeholder="Enter your Institution" name="institution" title="Fill this field">
+          </td>
+          <td style="width: 2%;"></td>
+          <td style="width: 48%;">
+            <label for="region"><b>Region <span class="region w3-small" style="color: red">*</span></b></label>
+            <select name="region" id="region" title="Select a region" required>
+              <option value="" selected disabled>Select a Region</option>
+              <option value="Africa">Africa</option>
+              <option value="Asia-Pacific">Asia-Pacific</option>
+              <option value="Europe">Europe</option>
+              <option value="Latin America">Latin America and Caribbean</option>
+              <option value="Middle East">Middle East</option>
+              <option value="North America">North America</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <label for="psw"><b>Password <span class="psw w3-small" style="color: red">*</span></b></label>
+      <input type="password" placeholder="Enter Password" name="psw" pattern="^(?=.*[0-9])(?=.*[A-Za-z_.-]).{7,32}$" required
+      title="Password must be made of letters, numbers and must be between 8-32 characters ">
+
+      <label for="psw-repeat"><b>Repeat Password <span class="psw-repeat w3-small" style="color: red">*</span></b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required
+      title="Passwords must match">
+      
+      <button type="submit" class="signupbtn" onclick="">Sign Up</button>
+    </div>
+
+    <div class="bottomcontainer">
+      <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+      <div class="extra">
+        <span>Already have an account? <a href="#" onclick="document.getElementById('login').style.display='block'; document.getElementById('signup').style.display='none';">Log in</a></span>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="/login.js"></script>

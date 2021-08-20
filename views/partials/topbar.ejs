@@ -1,0 +1,21 @@
+<div class="top-container">
+    <div class="top-cell button-cell">
+        <button class="menu-button" id="menu-button" onclick="sidebar_open();"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="w3-container top-cell">
+        <% if (contentpath.includes('users')) { %>
+            <form class="search-container" action="" method="get" autocomplete="off">
+                <input type="text" placeholder="Search for a User..." name="search">
+                <button type="submit" class="w3-hover-none"><i class="fa fa-search"></i></button>
+            </form>
+        <% } else { %>
+            <form class="search-container" action="/resources" method="get" autocomplete="off">
+                <input type="text" placeholder="Search for a Resource..." name="search">
+                <button type="submit" class="w3-hover-none"><i class="fa fa-search"></i></button>
+            </form>
+        <% } %>
+    </div>
+    <div class="w3-container top-cell" style="width: 100px">
+        <img class="w3-right" src="/Images/Logos/logo.png" alt="NI Logo" style="height: 40px;"></img>
+    </div>
+</div>

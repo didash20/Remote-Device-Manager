@@ -1,0 +1,93 @@
+iframe{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0008;
+    animation: opac 0.8s;
+}
+
+.popup {
+  position: absolute;
+  z-index: 3;
+  width: fit-content;
+  height: fit-content;
+  top: 20%;
+  left: 50%;
+  margin: 20px 20px;
+  padding: 20px;
+  transform: translate(-50%,0);
+  background-color: #333;
+  border-radius: 10px;
+  border: 1px solid #333;
+  color: #fff;
+  animation: opac 1s;
+}
+
+.popup .title {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    cursor: context;
+}
+
+.popup .message {
+    padding: 5px;
+    max-width: 300px;
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 0px;
+    text-align: left;
+    cursor: context-menu;
+}
+
+.popup .message::-webkit-scrollbar {
+    width: 5px;
+}
+.popup .message::-webkit-scrollbar-track{
+    background: #0000;
+}
+.popup .message::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+
+.popup button {
+    position: relative;
+    display: block;
+    float: right;
+    height: 30px;
+    width: 40%;
+    margin-top: 20px;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+.popup button:hover {
+    opacity: 0.5;
+}
+
+@keyframes opac{
+    from{opacity:0} 
+    to{opacity:1}
+}

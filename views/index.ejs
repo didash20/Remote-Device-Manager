@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%- include('partials/head'); -%> 
+</head>
+<body>
+        
+<!-- Top container -->
+<%- include('partials/topbar'); -%> 
+
+<!-- Sidebar/menu -->
+<%- include('partials/sidebar'); -%> 
+
+<% if (!account) { %>
+<!-- Login/Signin Form -->
+<%- include('partials/login'); -%> 
+<% } %>
+
+<!-- !MAIN PAGE! -->
+<div class="main" id="main">
+
+<!-- !PAGE CONTENT! -->
+<div class="page-content" id="page-content">
+<%- include(contentpath) -%>
+</div>
+
+<hr>
+<!-- Footer -->
+<%- include('partials/footer'); -%> 
+
+<!-- End page content -->
+</div>
+
+<!--Main Page functionality script-->
+<script src="/main.js"></script>
+
+</body>
+</html>

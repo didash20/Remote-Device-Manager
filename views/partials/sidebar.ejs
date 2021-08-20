@@ -1,0 +1,76 @@
+<nav class="sidebar" id="Sidebar">
+    
+    <div class="w3-bar" id="account-menu">
+        <a href="" class="w3-hide-large account-menu-button-close" onclick="sidebar_close()" title="close menu"><i class="fa fa-remove fa-fw"></i></a>
+        <div class="w3-container w3-col s10 w3-xlarge" style="padding-top: 5px; padding-bottom: 5px;">
+        <% if (account) { %>
+            <span class="w3-bar-item">Welcome, <br><strong><%= account.username %></strong></span>
+        <% } else { %>
+            <a href="javascipt:{}" class="w3-bar-item account-menu-button" style="font-size: 22px;" onclick="document.getElementById('login').style.display='block'">Log In</a>
+            <a href="javascipt:{}" class="w3-bar-item account-menu-button" style="font-size: 22px;"  onclick="document.getElementById('signup').style.display='block'">Sign up</a>
+        <% } %>
+        </div>
+    </div>
+    <hr style="margin-top: 0;">
+    <div class="w3-container w3-xxlarge">Dashboard</div>
+    <div class="w3-bar-block w3-xlarge">
+        <a href="/" class="sidebar-button" id="home"><i class="fa fa-home fa-fw"></i>  Home</a>
+        <a href="/resources" class="sidebar-button" id="resources"><i class="fa fa-wrench fa-fw"></i>  Resources</a>
+        <% if (account) { %>
+            <% if (account.roles.find(role => role === "user")) { %>
+                <a href="/reservations" class="sidebar-button" id="reservations"><i class="fa fa-calendar fa-fw"></i>  My Reservations</a>
+                <a href="/history" class="sidebar-button" id="history"><i class="fa fa-history fa-fw"></i>  History</a>
+            <% } %>
+            <% if (account.roles.find(role => role === "moderator")) { %>
+                <a href="/moderator/statistics" class="sidebar-button" id="statistics"><i class="fa fa-bar-chart fa-fw"></i>  Statistics</a>
+                <a href="/moderator/users" class="sidebar-button" id="users"><i class="fa fa-users fa-fw"></i>  Users</a>
+            <% } else if(account.roles.find(role => role === "admin")) { %>
+                <a href="/admin/users" class="sidebar-button" id="users"><i class="fa fa-users fa-fw"></i>  Users</a>
+            <% } %>
+            <% if (account.roles.find(role => role === "admin")) { %>
+                <a href="/admin/createResource" class="sidebar-button" id="createResource"><i class="fa fa-plus fa-fw"></i>  Create Resource</a>
+                <a href="/admin/createUser" class="sidebar-button" id="createUser"><i class="fa fa-plus fa-fw"></i>  Create User</a>
+            <% } %>
+            <form  action="/logout" method="post">
+                <button type="submit" class="sidebar-button" id="settings" ><i class="fa fa-cog fa-fw"></i>  Sign out</button>
+            </form>
+        <% } %>
+    </div>
+    <br>
+    <div class="w3-container w3-xxlarge">How To</i>  </div>
+    <div class="w3-bar-block w3-large">
+        <a href="/howto/Open Remote Panel VI Resources" class="sidebar-button" id=""><i class="fa fa-question-circle fa-fw"></i>  Open a Remote Panel</a>
+    </div>
+    <br>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="sidebar-overlay" onclick="sidebar_close()" title="close side menu" id="Overlay"></div>
+
+<script>
+    /* Sidebar open and close functions */
+
+    // Get the Sidebar
+    var Sidebar = document.getElementById("Sidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("Overlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function sidebar_open() {
+        if (Sidebar.style.display === 'block') {
+            Sidebar.style.display = 'none';
+            overlayBg.style.display = "none";
+        } else {
+            Sidebar.style.display = 'block';
+            overlayBg.style.display = "block";
+        }
+    }
+
+    // Close the sidebar with the close button
+    function sidebar_close() {
+        Sidebar.style.display = "none";
+        overlayBg.style.display = "none";
+    }
+</script>

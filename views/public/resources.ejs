@@ -1,0 +1,152 @@
+<!-- Header -->
+<header class="w3-container" style="padding-top:22px">
+    <h2><b><i class="fa fa-dashboard"></i>  Instruments & Resources</b></h2>
+</header>
+
+<% if (resources && resources.length > 0) { %>
+    <% const instruments = [], resourcesbyinstrument = [];%> 
+    <% resources.forEach( resource => { %>
+        <% const instrumentindex = instruments.indexOf(resource.instrument) %> 
+        <% if (instrumentindex >= 0) { %>
+            <% resourcesbyinstrument[instrumentindex].push(resource) %>
+        <% } else { %>
+            <% instruments.push(resource.instrument) %>
+            <% resourcesbyinstrument.push([resource]) %>
+        <% } %> 
+    <% }) %>
+    <% instruments.push('Other Instruments') %> 
+    <% resourcesbyinstrument.push([]) %>
+    
+    <% instruments.forEach( (instrument,instrumentindex) => { %>
+        <% if(resourcesbyinstrument[instrumentindex].length > 1 || (instrument === 'Other Instruments' && resourcesbyinstrument[instrumentindex].length > 0)) { %> 
+            <div class="w3-container">
+                <h2><%= instrument %></h2>
+                <table class="resource-table">
+                    <tr>
+                        <th class="w3-xlarge" style="width: 100px;">Resource</th>
+                        <th class="w3-xlarge resource-table-name"></th>
+                        <th class="w3-xlarge w3-hide-small" style="width: 150px;">Instrument</th>
+                        <th class="w3-xlarge w3-hide-small">Description</th>
+                        <th style="width: 80px;"></th>
+                    </tr>
+                    <% resourcesbyinstrument[instrumentindex].forEach( resource => { %>
+                        <tr class="resource" id="<%= resource.name %>">
+                            <td>
+                                <img src="<%= resource.imagepath %>" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+                            </td>
+                            <% if (account && account.roles.find(role => role === "admin" || role === "user")) { %>
+                                <td>
+                                    <span class="resource-table-name"><%= resource.name %><br> 
+                                    <span class="w3-small">by <%= resource.creator %></span></span>
+                                </td>
+                            <% } else { %>
+                                <td class="w3-hide-small">
+                                    <span><%= resource.name %><br> 
+                                    <span class="w3-small">by <%= resource.creator %></span></span>
+                                </td>
+                                <td class="resource-table-name w3-hide-medium w3-hide-large" colspan="2">
+                                    <span><%= resource.name %><br> 
+                                    <span class="w3-small">by <%= resource.creator %></span></span>
+                                </td>
+                            <% } %>
+                            <td class="w3-xlarge w3-hide-small"><%= resource.instrument %></td>
+                            <% if (account  && account.roles.find(role => role === "admin" || role === "user")) { %>
+                                <td class="w3-small w3-hide-small"><div style="max-height: 70px; overflow-y: auto;"><%= resource.description %></div></td>
+                                <td class="w3-xlarge">
+                                    <% if (account.roles.find(role => role === "admin")) { %>
+                                        <form id="clearResource-<%= resource.name %>" action="/clearResource" method="post" style="display: none;" >
+                                            <input type="text" name="resourceName" value="<%= resource.name %>">
+                                        </form>
+                                        <a href="javascript:{}" onclick="if(confirm('Are you sure you want to delete the Resource: <%= resource.name %>?'))document.getElementById('clearResource-<%= resource.name %>').submit();"><i class="fa fa-trash fa-fw hover-text-dark-1-trans-50" style="float:right;"></i></a>
+                                    <% } %>
+                                    <% if (account.roles.find(role => role === "user")) { %>
+                                        <a href="#"><i class="schedule fa fa-calendar fa-fw hover-text-dark-1-trans-50" style="float:right;"></i></a>
+                                    <% } %>
+                                </td>
+                            <% } else { %>
+                                 <td class="w3-small w3-hide-small" colspan="2"><div style="max-height: 70px; overflow-y: auto;"><%= resource.description %></div></td>
+                            <% } %>
+                        </tr>
+                    <% }); %>
+                </table>
+            </div>
+            <br><br>
+        <% } else if(instrument !== 'Other Instruments') { %>
+            <% resourcesbyinstrument[instruments.length - 1].push(resourcesbyinstrument[instrumentindex][0]) %> 
+        <% } %> 
+    <% }) %>
+<% } else { %>
+    <div class="w3-container">
+        <h3>No resources were found</h3>
+        <p>Go <a href="admin/createResource">here</a> to create a resource.</p>
+    </div>
+<% } %>
+
+<script src="/resources.js"></script>
+
+<!--div class="w3-container">
+    <h3>ELVIS III</h3>
+    <table class="resource-table">
+        <tr>
+            <th class="w3-xlarge" style="width: 15%;">Resource</th>
+            <th class="w3-xlarge" style="width: 20%;"></th>
+            <th class="w3-xlarge" style="width: 18%;">Instrument</th>
+            <th class="w3-xlarge" style="width: 47%;">Description</th>
+        </tr>
+        <tr id="button">
+            <td>
+                <img src="/Images/ml.png" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+            </td>
+            <td>
+                <span>Measurements Live <br> 
+                <span class="w3-small">by NI</span></span>
+            </td>
+            <td class="w3-xlarge">ELVIS III</td>
+            <td class="w3-small">Be able to learn all about instruments in Measurements Live with a real ELVIS III Device. Use the extensive number of available instruments and understand them with all the measurements being displayed in the actual time.</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/Images/cq.png" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+            </td>
+            <td>
+                <span>Control System Design and Analysis <br> 
+                <span class="w3-small">by Quanser Inc.</span></span>
+            </td>
+            <td class="w3-xlarge">ELVIS III</td>
+            <td class="w3-small">Experiment with the pendulum of the Quanser Controls' Board and check how changing some of the parameters from the system can modify the pendulum's behavior.</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/Images/pe.png" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+            </td>
+            <td>
+                <span>Power Electronics <br> 
+                <span class="w3-small">by Texas Instruments</span></span>
+            </td>
+            <td class="w3-xlarge">ELVIS III</td>
+            <td class="w3-small">Understand all the electronics behind the fundamentals of DC-DC linear regulators, DC-DC buck regulators, DC-AC inverters, and AC-DC rectifiers.</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/Images/ms.png" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+            </td>
+            <td>
+                <span>Fundamentals of Mechatronic Sensors <br> 
+                <span class="w3-small">by Quanser Inc.</span></span>
+            </td>
+            <td class="w3-xlarge">ELVIS III</td>
+            <td class="w3-small">Complete hands-on activities to measure, calibrate, and analyze common physical properties/phenomena. Understand all the electronics that take these simple measurements to be made and create your own ways to interpret and analyze the information.</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/Images/ce.png" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+            </td>
+            <td>
+                <span>Communications Principles <br> 
+                <span class="w3-small">by Emona Tims</span></span>
+            </td>
+            <td class="w3-xlarge">ELVIS III</td>
+            <td class="w3-small">Be able to learn how Measurements Live works with a real ELVIS III Device. Use the diverse instruments available and understand them with all the measurements being displayed in the actual time.</td>
+        </tr>
+    </table>
+</div-->

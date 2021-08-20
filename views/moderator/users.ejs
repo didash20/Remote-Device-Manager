@@ -1,0 +1,71 @@
+<!-- Header -->
+<header class="w3-container" style="padding-top:22px">
+  <h2><b><i class="fa fa-users"></i> Users</b></h2>
+</header>
+
+<% if (users.institutions.length > 0) { %>
+<% users.institutions.forEach( (institution,institutionindex) => { %>
+<div class="w3-container">
+  <h2><%= institution %></h2>
+  <table class="resource-table">
+    <tr>
+      <th class="w3-xlarge" style="width: 200px;">User</th>
+      <th class="w3-xlarge">Institution</th>
+      <th class="w3-xlarge w3-hide-small" style="width: 120px;">Region</th>
+      <th class="w3-xlarge w3-hide-small">E-mail</th>
+      <th class="w3-xlarge w3-hide-small w3-hide-medium" style="width: 100px;">MostUsedResource</th>
+      <th class="w3-xlarge w3-hide-small w3-hide-medium resource-table-name" style="width: 150px;"></th>
+      <th style="width: 80px;"></th>
+    </tr>
+    <% users.usersbyinstitution[institutionindex].forEach( user => { %>
+    <tr class="user" id="<%= user.username %>">
+      <% if (user.firstname === undefined || user.firstname === '') { %>
+        <td class="w3-xlarge"><%= user.username %></td>
+      <% } else { %>
+        <td class="w3-xlarge"><%= user.firstname %> <%= user.lastname %></td>
+      <% } %>
+      
+      <td class="w3-xlarge"><%= user.institution %></td>
+      <td class="w3-large w3-hide-small"><%= user.region %></td>
+      <td class="w3-xlarge w3-hide-small">
+        <div style="max-height: 70px; overflow-y: auto;"><%= user.email %></div>
+      </td>
+      <% if(user.resources[0]) { %> 
+      <td class="w3-hide-medium w3-hide-small">
+        <img src="<%= user.resources[0].imagepath %>" class="w3-left w3-circle w3-margin-right" style="width:100%;">
+      </td>
+      <td class="w3-hide-medium w3-hide-small">
+        <span><%= user.resources[0].name %><br> 
+        <span class="w3-small">by <%= user.resources[0].creator %></span></span>
+      </td>
+      <% } else { %>
+        <td colspan="2" class="w3-hide-medium w3-hide-small">
+          No Resources used yet.
+        </td>
+      <% } %>
+      <td class="w3-xlarge">
+        <% if (account.roles.find(role => role === "admin")) { %>
+        <form id="clearUser-<%= user._id %>" action="/admin/clearUser" method="post" style="display: none;">
+          <input type="text" name="user" value="<%= user._id %>">
+        </form>
+        <a href="javascript:{}"
+          onclick="if(confirm('Are you sure you want to delete the User: <%= user.username %>?'))document.getElementById('clearUser-<%= user._id %>').submit();"><i
+            class="fa fa-trash fa-fw hover-text-dark-1-trans-50" style="float:right;"></i></a>
+        <% } %>
+        <a href="/moderator/user?userid=<%= user._id %>"><i
+            class="schedule fa fa-info-circle fa-fw hover-text-dark-1-trans-50" style="float:right;"></i></a>
+      </td>
+    </tr>
+    <% }); %>
+  </table>
+</div>
+<br><br>
+<% }) %>
+<% } else { %>
+<div class="w3-container">
+  <h3>No users were found</h3>
+  <% if (account.roles.find(role => role === "admin")) { %>
+  <p>Go <a href="admin/createUser">here</a> to create a user.</p>
+  <% } %>
+</div>
+<% } %>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resource | <%= page %></title>
+    <link rel="icon" type="image/png"
+        href="/Images/Icon Library/Hardware Icons PNG/Forest Green Hardware Icons/Forest Green Hardware Icons Icon 70 Elvis 3 FG.png" >
+    <meta name="dates" content="<%= dates %>">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mask/mask.css">
+</head>
+<body>
+    <div class="overlay" id="popup">
+        <div class="popup">
+            <h1 class="title">Expiring Soon</h1>
+            <p class="message">The connection will expire in less than 5 minutes. <br><br>
+                Remember to log or save data before the session expires.</p>
+            <button onclick="popup_close();">Ok</button>
+        </div>
+    </div>
+    <iframe src='' id='instrument'></iframe>
+    <script type="text/javascript" src="/main.js"></script>
+    <script type="text/javascript" src="/mask/mask.js"></script>
+</body>
+</html>
